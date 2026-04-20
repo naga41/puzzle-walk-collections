@@ -11,7 +11,7 @@ class PuzzleWalkEngine {
 
     async init() {
         const urlParams = new URLSearchParams(window.location.search);
-        const contentId = urlParams.get('content') || 'tokyo-rediscovery'; // default fallback for now
+        const contentId = urlParams.get('content') || 'tokyo-rediscovery'; 
 
         try {
             const response = await fetch(`contents/${contentId}/scenario.json`);
@@ -21,12 +21,12 @@ class PuzzleWalkEngine {
             this.applyTheme(this.scenarioData.theme);
             this.headerTitle.innerText = this.scenarioData.metadata.title;
             this.renderScenario(this.scenarioData.chapters);
-            this.runBootSequence(this.scenarioData.metadata.bootLogs);
+            this.playPoeticPrologue(this.scenarioData.metadata.prologue);
             
         } catch (err) {
             console.error(err);
             this.container.innerHTML = `<div style="text-align:center; padding: 50px;">
-                <p>エラーが発生しました: コンテンツを読み込めません。</p>
+                <p>……記憶を読み込めませんでした。</p>
                 <a href="index.html" class="btn">ポータルに戻る</a>
             </div>`;
             this.bootScreen.style.display = 'none';
@@ -41,25 +41,39 @@ class PuzzleWalkEngine {
         }
     }
 
-    runBootSequence(logs) {
+    async playPoeticPrologue(prologueLines) {
         const logContainer = document.getElementById('boot-log');
-        if (!logs || logs.length === 0) {
+        if (!prologueLines || prologueLines.length === 0) {
             this.bootScreen.style.display = 'none';
             return;
         }
 
-        logs.forEach((text, i) => {
-            setTimeout(() => {
-                const div = document.createElement('div');
-                div.className = 'typing-text';
-                div.innerText = text;
-                logContainer.appendChild(div);
-            }, i * 800);
-        });
-        setTimeout(() => {
-            this.bootScreen.style.opacity = '0';
-            setTimeout(() => this.bootScreen.style.display = 'none', 1000);
-        }, logs.length * 900);
+        // Sleep helper
+        const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+        for (let i = 0; i < prologueLines.length; i++) {
+            const span = document.createElement('div');
+            span.className = 'prologue-text';
+            span.innerHTML = prologueLines[i];
+            logContainer.innerHTML = ''; // クリアして中央へ
+            logContainer.appendChild(span);
+            
+            // フェードイン
+            await sleep(100);
+            span.classList.add('show');
+            
+            // 待機 (文章の長さに応じて)
+            const waitTime = Math.max(2500, prologueLines[i].length * 100);
+            await sleep(waitTime);
+            
+            // フェードアウト
+            span.classList.remove('show');
+            await sleep(1500); // 完全に消えるのを待つ
+        }
+
+        // 全て終わったら画面遷移
+        this.bootScreen.style.opacity = '0';
+        setTimeout(() => this.bootScreen.style.display = 'none', 2000);
     }
 
     renderScenario(chapters) {
@@ -88,25 +102,23 @@ class PuzzleWalkEngine {
 
             // Input and Action Button
             if (ch.type === 'challenge' || ch.type === 'final') {
-                html += `<input type="text" id="ans${ch.id}" placeholder="${ch.type === 'final' ? 'ENTER FINAL KEY...' : 'ENTER DECRYPT KEY...'}">`;
-                html += `<button class="btn" onclick="engine.checkAnswer('${ch.id}', '${ch.answerKeyword}', ${ch.type === 'final'}, '${ch.nextChapterId}')">${ch.actionLabel || '復元を実行'}</button>`;
-                if (ch.successMessage) {
-                    html += `<div id="success${ch.id}" class="success-indicator">${ch.successMessage}</div>`;
-                }
+                html += `<input type="text" id="ans${ch.id}" placeholder="キーワードを入力">`;
+                html += `<button class="btn" onclick="engine.checkAnswer('${ch.id}', '${ch.answerKeyword}', ${ch.type === 'final'}, '${ch.nextChapterId}', '${ch.successMessage || '成功'}', '${ch.failureMessage || '失敗'}')">${ch.actionLabel}</button>`;
+                html += `<div id="feedback${ch.id}" class="feedback-msg"></div>`;
             } else if (ch.type === 'briefing') {
                 // For briefing, button to unlock next
-                html += `<button class="btn" onclick="engine.unlockChapter('${ch.nextChapterId}')">${ch.actionLabel || '開始する'}</button>`;
+                html += `<button class="btn" onclick="engine.unlockChapter('${ch.nextChapterId}')">${ch.actionLabel}</button>`;
             }
 
             // Map and Hints
-            if (ch.mapLink) {
-                html += `<a href="${ch.mapLink.url}" class="btn btn-map" target="_blank">${ch.mapLink.label}</a>`;
-            }
             if (ch.hint) {
                 html += `
-                    <div class="hint" onclick="document.getElementById('ht${ch.id}').style.display = document.getElementById('ht${ch.id}').style.display === 'block' ? 'none' : 'block'">[ 観測支援を要請 ]</div>
+                    <div class="hint" onclick="document.getElementById('ht${ch.id}').style.display = document.getElementById('ht${ch.id}').style.display === 'block' ? 'none' : 'block'">[ 観測支援を求める ]</div>
                     <div id="ht${ch.id}" class="hint-text">${ch.hint}</div>
                 `;
+            }
+            if (ch.mapLink) {
+                html += `<div style="text-align: center;"><a href="${ch.mapLink.url}" class="btn btn-map" target="_blank">${ch.mapLink.label}</a></div>`;
             }
 
             section.innerHTML = html;
@@ -119,30 +131,44 @@ class PuzzleWalkEngine {
         const target = document.getElementById(`ch${chapterId}`);
         if(target) {
             target.classList.remove('locked');
-            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => {
+                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 300);
         }
     }
 
-    checkAnswer(chapterId, correctKeyword, isFinal, nextChapterId) {
+    showFeedback(chapterId, msg, isSuccess) {
+        const fb = document.getElementById(`feedback${chapterId}`);
+        if (!fb) return;
+        fb.innerText = msg;
+        fb.style.color = isSuccess ? 'var(--text-main)' : 'var(--accent)';
+        fb.style.opacity = '1';
+        
+        if (!isSuccess) {
+            setTimeout(() => { fb.style.opacity = '0'; }, 3000);
+        }
+    }
+
+    checkAnswer(chapterId, correctKeyword, isFinal, nextChapterId, successMsg, failMsg) {
         const inputElement = document.getElementById(`ans${chapterId}`);
         if (!inputElement) return;
         
         const val = inputElement.value;
         if (val.includes(correctKeyword)) {
+            inputElement.disabled = true;
+            this.showFeedback(chapterId, successMsg, true);
             if (isFinal) {
-                this.triggerFinalAha();
+                setTimeout(() => this.triggerFinalAha(), 1500);
             } else {
-                const successDiv = document.getElementById(`success${chapterId}`);
-                if (successDiv) successDiv.style.display = 'block';
-                setTimeout(() => this.unlockChapter(nextChapterId), 800);
+                setTimeout(() => this.unlockChapter(nextChapterId), 1500);
             }
         } else {
-            alert("! ACCESS DENIED: システムが適合しません。");
+            this.showFeedback(chapterId, failMsg, false);
         }
     }
 
     triggerFinalAha() {
-        // Trigger Aha Experience Mode
+        // Trigger Aha Experience Mode (Slow ocean fade)
         document.body.classList.add('aha-mode');
         
         const finalReward = this.scenarioData.chapters.find(ch => ch.type === 'final')?.finalReward;
@@ -150,20 +176,20 @@ class PuzzleWalkEngine {
         setTimeout(() => {
             if (finalReward) {
                 this.container.innerHTML = `
-                    <div style="animation: fadeIn 3s; text-align:center; padding-top: 20px;">
-                        <h1 style="color:#7dd3fc; font-size:1.8rem; letter-spacing: 4px; text-shadow: 0 0 15px var(--accent-glow);">${finalReward.title}</h1>
-                        <div style="font-family:'Noto Serif JP'; line-height:2.4; text-align:left; margin-top:30px; font-size: 1rem;">
+                    <div class="fade-in" style="text-align:center; padding-top: 40px;">
+                        <h1 style="color:#bae6fd; font-size:1.8rem; letter-spacing: 4px; font-weight:300;">${finalReward.title}</h1>
+                        <div style="line-height:2.4; text-align:left; margin-top:50px; font-size: 1rem; font-weight: 300;">
                             ${finalReward.content.join('')}
                         </div>
-                        <p style="margin-top:60px; font-size:0.75rem; color:#38bdf8; letter-spacing: 2px;">${finalReward.footer}</p>
-                        <button class="btn btn-map" onclick="location.href='index.html'" style="border-color:#7dd3fc; color:#7dd3fc; margin-bottom:80px;">${finalReward.returnPortalLabel || 'ポータルに戻る'}</button>
+                        <p class="delayed-show" style="margin-top:80px; font-size:0.85rem; color:#7dd3fc; letter-spacing: 2px;">${finalReward.footer}</p>
+                        <button class="btn delayed-show" onclick="location.href='index.html'" style="border-color:#7dd3fc; color:#7dd3fc; margin:80px auto; width: 80%;">${finalReward.returnPortalLabel}</button>
                     </div>
                 `;
             } else {
-                 this.container.innerHTML = `<h1 style="text-align:center">MISSION COMPLETE</h1>`;
+                 this.container.innerHTML = `<h1 class="fade-in" style="text-align:center">記憶の復元完了</h1>`;
             }
-            window.scrollTo(0, 0);
-        }, 1800);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 2000);
     }
 }
 
