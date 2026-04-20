@@ -1,0 +1,21 @@
+{
+  "name": "謎解き街歩きコレクション",
+  "short_name": "謎解き街歩き",
+  "description": "複数の街に対応する謎解き街歩きエンジン",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiB2aWV3Qm94PSIwIDAgMTkyIDE5MiI+PHJlY3Qgd2lkdGg9Ijk5OSIgaGVpZ2h0PSI5OTkiIGZpbGw9IiMwMjA2MTciLz48Y2lyY2xlIGN4PSI5NiIgY3k9Ijk2IiByPSI1MCIgc3Ryb2tlPSIjMGVhNWU5IiBzdHJva2Utd2lkdGg9IjgiIGZpbGw9Im5vbmUiLz48L3N2Zz4=",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHJlY3Qgd2lkdGg9Ijk5OSIgaGVpZ2h0PSI5OTkiIGZpbGw9IiMwMjA2MTciLz48Y2lyY2xlIGN4PSIyNTYiIGN5PSIyNTYiIHI9IjEzMCIgc3Ryb2tlPSIjMGVhNWU5IiBzdHJva2Utd2lkdGg9IjI1IiBmaWxsPSJub25lIi8+PC9zdmc+",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

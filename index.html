@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>謎解き街歩きコレクション</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <style>
+        :root {
+            --bg-base: #0f172a;
+            --text-main: #f8fafc;
+            --accent: #38bdf8;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: 'Noto Serif JP', serif;
+            margin: 0; padding: 0;
+            background-image: radial-gradient(circle at 50% -20%, #1e293b 0%, #0f172a 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            margin: 0; font-size: 1.5rem; letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 0.8rem; color: #94a3b8; letter-spacing: 1px;
+            margin-top: 10px; font-family: 'JetBrains Mono', monospace;
+        }
+
+        .container {
+            max-width: 600px; margin: 40px auto; padding: 0 20px;
+        }
+
+        .scenario-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            text-decoration: none;
+            color: var(--text-main);
+            display: block;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scenario-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--accent);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+            transform-origin: bottom;
+        }
+
+        .scenario-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border-color: var(--accent);
+        }
+
+        .scenario-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .scenario-title {
+            font-size: 1.3rem; margin: 0 0 10px 0;
+        }
+
+        .scenario-desc {
+            font-size: 0.9rem; color: #cbd5e1; line-height: 1.6;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            font-size: 0.7rem;
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 15px;
+        }
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>謎解き街歩きコレクション</h1>
+    <div class="subtitle">PUZZLE WALK METRO ENGINE</div>
+</header>
+
+<div class="container">
+    <a href="app.html?content=tokyo-rediscovery" class="scenario-card">
+        <div class="status-badge">AVAILABLE</div>
+        <h2 class="scenario-title">第1弾：東京再発見アーカイブ</h2>
+        <p class="scenario-desc">1923年の建築家・葛城が遺した「消失した設計図」を、2026年の観測者が復元するSFミステリー。東京の真の姿をサルベージせよ。</p>
+    </a>
+
+    <div class="scenario-card" style="opacity: 0.5; cursor: not-allowed;">
+        <div class="status-badge" style="color:#ef4444; background: rgba(239, 68, 68, 0.1);">CLASSIFIED</div>
+        <h2 class="scenario-title">第2弾：[DATA_ENCRYPTED]</h2>
+        <p class="scenario-desc">現在アクセス権限がありません。次なる記録の復元をお待ちください。</p>
+    </div>
+</div>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('sw.js');
+        });
+    }
+</script>
+
+</body>
+</html>

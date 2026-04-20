@@ -1,0 +1,128 @@
+/* core/css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap');
+
+:root {
+    /* デフォルトのテーマ変数（JavascriptでJSONのテーマを上書き可能） */
+    --bg-dark: #020617;
+    --accent: #0ea5e9;
+    --accent-glow: rgba(14, 165, 233, 0.4);
+    --text-main: #f1f5f9;
+    --glass: rgba(15, 23, 42, 0.9);
+    --danger: #ef4444;
+    --success: #10b981;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'JetBrains Mono', 'Noto Serif JP', serif;
+    margin: 0;
+    overflow-x: hidden;
+    background-image: 
+        radial-gradient(circle at 50% 50%, #1e293b 0%, #020617 100%),
+        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+        linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    background-size: 100% 100%, 100% 4px, 3px 100%;
+}
+
+/* UI Utility Classes */
+.hidden { display: none !important; }
+
+/* 起動画面 */
+#boot-screen {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--bg-dark);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.typing-text {
+    color: var(--accent);
+    font-size: 0.9rem;
+    margin: 5px 0;
+    border-right: 2px solid var(--accent);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 1.5s steps(30, end) forwards;
+}
+
+@keyframes typing { from { width: 0; } to { width: 100%; } }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* メインコンテンツ */
+header {
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--accent);
+    background: rgba(2, 6, 23, 0.9);
+    position: sticky;
+    top: 0; z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.container { max-width: 500px; margin: 0 auto; padding: 20px; }
+
+.card {
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(15px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.locked { filter: blur(8px) grayscale(1); opacity: 0.3; pointer-events: none; }
+
+.briefing { border: 1px solid var(--accent); background: rgba(14, 165, 233, 0.05); }
+
+.chapter-label { color: var(--accent); font-size: 0.7rem; font-weight: bold; letter-spacing: 2px; }
+h2 { font-size: 1.4rem; margin: 10px 0; font-family: 'Noto Serif JP'; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+
+.monologue { font-style: italic; color: #94a3b8; font-size: 0.9rem; line-height: 1.8; margin-bottom: 20px; border-left: 2px solid var(--accent); padding-left: 15px; }
+.html-content { font-size: 0.9rem; line-height: 1.8; }
+
+.btn {
+    display: block; width: 100%; padding: 15px; margin-top: 15px;
+    background: var(--accent); color: white; border: none;
+    border-radius: 4px; font-weight: bold; cursor: pointer;
+    text-align: center; text-decoration: none; font-size: 0.9rem;
+    transition: 0.3s;
+}
+.btn:active { transform: scale(0.98); }
+.btn-map { background: transparent; border: 1px solid var(--accent); color: var(--accent); margin-top: 25px; }
+
+input {
+    width: 100%; padding: 12px; background: rgba(0,0,0,0.5);
+    border: 1px solid var(--accent); color: white;
+    margin-top: 15px; box-sizing: border-box; outline: none; border-radius: 4px;
+    font-family: 'JetBrains Mono';
+}
+
+.hint { font-size: 0.75rem; color: #64748b; margin-top: 20px; cursor: pointer; text-decoration: underline; text-align: right; }
+.hint-text { display: none; padding: 10px; background: rgba(255,255,255,0.05); margin-top: 10px; font-size: 0.8rem; line-height: 1.6; }
+
+.success-indicator { display: none; color: var(--success); text-align: center; font-weight: bold; margin-top: 15px; }
+
+/* final reward AHA effect */
+.aha-mode {
+    transition: background-color 2.5s, color 2.5s;
+    background-color: #082f49 !important; /* The ocean deep blue */
+    color: #f1f5f9 !important;
+    background-image: none !important;
+}
+
+footer { text-align: center; padding: 40px; font-size: 0.7rem; color: #475569; }
+
+/* 共通ローダー */
+#loader {
+    text-align: center;
+    padding: 50px;
+    color: var(--accent);
+}

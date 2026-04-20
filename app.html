@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>謎解き街歩きエンジン</title>
+    <link rel="stylesheet" href="core/css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <script>
+        // Service Worker registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js').then(registration => {
+                    console.log('SW registered: ', registration.scope);
+                }).catch(err => {
+                    console.log('SW registration failed: ', err);
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+
+<div id="boot-screen">
+    <div id="boot-log" style="width: 280px;"></div>
+</div>
+
+<header>
+    <div style="font-size:0.6rem; color:var(--accent); letter-spacing:4px; margin-bottom:5px;">NODE:OBSERVER_LINK_ESTABLISHED</div>
+    <h1 id="header-title" style="margin:0; font-size:1.2rem; letter-spacing: 2px;">LOADING...</h1>
+</header>
+
+<div class="container" id="main-container">
+    <div id="loader">システムをロード中...</div>
+</div>
+
+<footer>
+    <p>© 2026 HISTORY OBSERVER ARCHIVE<br>PRODUCED BY OBSERVER TEAM</p>
+</footer>
+
+<script src="core/js/engine.js"></script>
+</body>
+</html>
