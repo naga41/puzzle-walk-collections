@@ -84,37 +84,67 @@ header {
     top: 0; z-index: 100;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    background: linear-gradient(to bottom, var(--bg-base) 60%, transparent 100%);
 }
 
 #header-title {
     margin: 0; font-size: 1.1rem; letter-spacing: 4px; font-weight: 300;
-    color: var(--accent);
+    color: var(--text-main);
 }
 
 .container { max-width: 500px; margin: 0 auto; padding: 20px 20px 80px; }
 
 .card {
     background: var(--glass-bg);
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 30px 25px;
     margin-bottom: 50px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     border: 1px solid var(--border);
     transition: all 1s ease-in-out;
+    position: relative;
+}
+
+.card::after {
+    content: ""; /* テキストのにじみ・紙のシワのようなノイズをうっすら重ねる */
+    position: absolute; top:0; left:0; right:0; bottom:0;
+    pointer-events: none;
+    background: var(--bg-texture);
 }
 
 .locked {
-    filter: blur(4px) grayscale(0.8);
-    opacity: 0.15;
+    filter: blur(3px) grayscale(0.5);
+    opacity: 0.25;
     pointer-events: none;
     transform: scale(0.98);
 }
 
 .briefing { background: transparent; border: none; box-shadow: none; padding: 0 10px; margin-top: 20px; border-left: 1px solid var(--border); }
 
-.chapter-label { color: var(--accent); font-size: 0.7rem; font-weight: 300; letter-spacing: 3px; margin-bottom: 5px; }
-h2 { font-size: 1.5rem; margin: 0 0 20px 0; font-weight: 400; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
+/* プロップ画像 */
+.prop-image-wrap {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.prop-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2px;
+    mix-blend-mode: multiply; /* 白背景を透過し、下の紙色に馴染ませる */
+    filter: sepia(0.3) contrast(1.1) opacity(0.85); /* 色褪せたトーン */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.prop-caption {
+    font-size: 0.75rem;
+    color: var(--accent);
+    margin-top: 8px;
+    font-style: italic;
+    text-align: right;
+}
+
+.chapter-label { color: var(--accent); font-size: 0.75rem; font-weight: 400; letter-spacing: 3px; margin-bottom: 5px; }
+h2 { font-size: 1.4rem; margin: 0 0 20px 0; font-weight: 400; border-bottom: 1px solid var(--border); padding-bottom: 15px; color: var(--text-main); }
 
 .monologue {
     color: var(--accent);
@@ -125,7 +155,11 @@ h2 { font-size: 1.5rem; margin: 0 0 20px 0; font-weight: 400; border-bottom: 1px
     border-left: 1px solid var(--border);
     font-style: italic;
 }
-.html-content { font-size: 0.95rem; line-height: 2; font-weight: 300; }
+.html-content { 
+    font-size: 0.95rem; line-height: 2; font-weight: 400; 
+    color: var(--text-main);
+    text-shadow: 0px 0px 1px rgba(62, 49, 36, 0.4); /* インクの微細な滲み */
+}
 .html-content p { margin-bottom: 1.5em; }
 
 .btn {

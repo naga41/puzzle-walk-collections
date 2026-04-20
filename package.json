@@ -1,0 +1,10 @@
+{
+  "name": "puzzle-walk-collections",
+  "version": "1.0.0",
+  "description": "A progressive web app engine for narrative puzzle walks.",
+  "scripts": {
+    "dev": "python3 -m http.server 8000"
+  },
+  "author": "shnagata",
+  "license": "MIT"
+}

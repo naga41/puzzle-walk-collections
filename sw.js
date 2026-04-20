@@ -22,7 +22,6 @@ self.addEventListener('fetch', (event) => {
         caches.match(event.request).then((cachedResponse) => {
             // キャッシュがあれば返す、なければネットワークへリクエスト
             return cachedResponse || fetch(event.request).then(response => {
-                // オプション: 動的に取得した scenario.json などをキャッシュに追加
                 return caches.open(CACHE_NAME).then(cache => {
                     if (event.request.url.indexOf('scenario.json') > -1) {
                         cache.put(event.request, response.clone());
@@ -30,11 +29,13 @@ self.addEventListener('fetch', (event) => {
                     return response;
                 });
             });
-        }).catch(() => {
-            // オフラインかつキャッシュにない場合のフォールバック（不要ならエラーを返す）
+        }).catch((err) => {
+            // オフラインかつキャッシュにない場合のフォールバック
             if (event.request.mode === 'navigate') {
                 return caches.match('./index.html');
             }
+            // faviconなど、キャッシュにもなく取得にも失敗した場合は空のレスポンスを返す
+            return new Response('', { status: 404, statusText: 'Not Found' });
         })
     );
 });

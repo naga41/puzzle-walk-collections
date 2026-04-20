@@ -12,11 +12,12 @@
     ]
   },
   "theme": {
-    "--bg-base": "#0f172a",
-    "--text-main": "#f8fafc",
-    "--accent": "#94a3b8",
-    "--glass-bg": "rgba(15, 23, 42, 0.4)",
-    "--border": "rgba(255, 255, 255, 0.05)"
+    "--bg-base": "#f5f0e6",
+    "--bg-texture": "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.08%22/%3E%3C/svg%3E')",
+    "--text-main": "#3e3124",
+    "--accent": "#736050",
+    "--glass-bg": "rgba(245, 240, 230, 0.7)",
+    "--border": "rgba(90, 70, 50, 0.15)"
   },
   "chapters": [
     {
@@ -38,6 +39,8 @@
       "label": "記録の断片 01",
       "title": "漂流者の遺した座標",
       "monologue": "「1600年、一艘のボロボロの船がこの地に流れ着いた。それがこの街の『外部インターフェース』の始まりだ。八重洲という名は、漂流した男がこの地に帰化した証。都市のOSは、異物の混入によってアップデートを開始した。」",
+      "imageUrl": "contents/tokyo-rediscovery/assets/ship.png",
+      "imageCaption": "——葛城の手記に挟まれていた古いスケッチ",
       "content": [
         "<p>東京駅八重洲口。かつての江戸城「外堀」が流れていた水の境界線だ。</p><p>この地の名の由来となった男、ヤン・ヨーステンが漂着した船「リーフデ号」。しかし、その船には日本へ来る前の**「以前の名前」**が存在した。葛城が「起点のキー」として設定したその名を特定せよ。</p>"
       ],
@@ -58,6 +61,8 @@
       "label": "記録の断片 02",
       "title": "守護獣のプロトコル",
       "monologue": "「日本橋。五街道の起点。ここが焼ければ、国が止まる。1923年の業火の中、人々は橋を必死に守った。葛城は、再建のマスター・アルゴリズムを、この橋の中央で不変の時を刻む『翼を持つ獣』の足元に封印したという。」",
+      "imageUrl": "contents/tokyo-rediscovery/assets/kirin.png",
+      "imageCaption": "——1923年当時のフィルム写真",
       "content": [
         "<p>日本橋の中央。そこには日本の道路の起点を示す「道路元標」がある。その傍らで、未来を見据えるように立つ「麒麟像」を観測せよ。</p><p>麒麟は、ある「紋章」が刻まれた盾をその手で押さえている。その紋章には何が描かれているか？</p>"
       ],
@@ -97,6 +102,8 @@
       "label": "記録の断片 04",
       "title": "流動するインターフェース",
       "monologue": "「水こそが、この街の真の血管だ。葛城はライン川の畔、ドイツのケルンで見た美しい吊り橋の夢を見た。彼はそれを、震災後の隅田川に再現しようとした。それは単なる橋ではない。世界と接続するための物理ポートだ。」",
+      "imageUrl": "contents/tokyo-rediscovery/assets/bridge.png",
+      "imageCaption": "——葛城が書き残した『世界一美しい吊り橋』の青写真",
       "content": [
         "<p>甘酒横丁の路地を抜け、隅田川のテラスへ出よ。目の前に現れる青い吊り橋「清洲橋」をスキャンせよ。</p><p>葛城が「世界一美しい」と称賛し、東京の再建モデルとしたドイツの**「都市名」**を入力せよ。</p>"
       ],

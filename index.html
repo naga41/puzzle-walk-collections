@@ -8,11 +8,12 @@
     <link rel="manifest" href="manifest.json">
     <style>
         :root {
-            --bg-base: #0f172a;
-            --text-main: #f8fafc;
-            --accent: #38bdf8;
-            --card-bg: rgba(30, 41, 59, 0.7);
-            --border: rgba(255, 255, 255, 0.1);
+            --bg-base: #f5f0e6;
+            --text-main: #3e3124;
+            --accent: #736050;
+            --card-bg: rgba(245, 240, 230, 0.5);
+            --border: rgba(90, 70, 50, 0.15);
+            --bg-texture: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.08%22/%3E%3C/svg%3E');
         }
 
         body {
@@ -20,25 +21,25 @@
             color: var(--text-main);
             font-family: 'Noto Serif JP', serif;
             margin: 0; padding: 0;
-            background-image: radial-gradient(circle at 50% -20%, #1e293b 0%, #0f172a 100%);
+            background-image: var(--bg-texture);
             min-height: 100vh;
+            line-height: 1.8;
         }
 
         header {
-            padding: 40px 20px;
+            padding: 50px 20px 30px;
             text-align: center;
             border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(10px);
         }
 
         h1 {
-            margin: 0; font-size: 1.5rem; letter-spacing: 2px;
-            font-weight: 700;
+            margin: 0; font-size: 1.4rem; letter-spacing: 4px;
+            font-weight: 400;
         }
 
         .subtitle {
-            font-size: 0.8rem; color: #94a3b8; letter-spacing: 1px;
-            margin-top: 10px; font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem; color: var(--accent); letter-spacing: 2px;
+            margin-top: 15px; font-weight: 300;
         }
 
         .container {
@@ -48,15 +49,16 @@
         .scenario-card {
             background: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 16px;
+            border-radius: 4px;
             padding: 30px;
             text-decoration: none;
             color: var(--text-main);
             display: block;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            transition: all 0.4s ease;
             position: relative;
-            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            background-image: var(--bg-texture);
         }
 
         .scenario-card::before {
@@ -64,14 +66,13 @@
             position: absolute; top: 0; left: 0; width: 4px; height: 100%;
             background: var(--accent);
             transform: scaleY(0);
-            transition: transform 0.3s ease;
+            transition: transform 0.4s ease;
             transform-origin: bottom;
         }
 
         .scenario-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
         }
 
         .scenario-card:hover::before {
@@ -79,21 +80,25 @@
         }
 
         .scenario-title {
-            font-size: 1.3rem; margin: 0 0 10px 0;
+            font-size: 1.3rem; margin: 0 0 15px 0; font-weight: 400;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
         }
 
         .scenario-desc {
-            font-size: 0.9rem; color: #cbd5e1; line-height: 1.6;
+            font-size: 0.95rem; color: var(--text-main); font-weight: 300;
+            text-shadow: 0px 0px 1px rgba(62, 49, 36, 0.2);
         }
 
         .status-badge {
             display: inline-block;
             padding: 4px 8px;
-            border-radius: 4px;
-            background: rgba(56, 189, 248, 0.1);
+            border-radius: 2px;
+            background: transparent;
             color: var(--accent);
+            border: 1px solid var(--border);
             font-size: 0.7rem;
-            font-family: 'JetBrains Mono', monospace;
+            letter-spacing: 2px;
             margin-bottom: 15px;
         }
         
@@ -103,20 +108,20 @@
 
 <header>
     <h1>謎解き街歩きコレクション</h1>
-    <div class="subtitle">PUZZLE WALK METRO ENGINE</div>
+    <div class="subtitle">都市の記憶を辿るアーカイブ</div>
 </header>
 
 <div class="container">
     <a href="app.html?content=tokyo-rediscovery" class="scenario-card">
-        <div class="status-badge">AVAILABLE</div>
-        <h2 class="scenario-title">第1弾：東京再発見アーカイブ</h2>
-        <p class="scenario-desc">1923年の建築家・葛城が遺した「消失した設計図」を、2026年の観測者が復元するSFミステリー。東京の真の姿をサルベージせよ。</p>
+        <div class="status-badge">閲覧可能</div>
+        <h2 class="scenario-title">第1巻：東京再発見アーカイブ</h2>
+        <p class="scenario-desc">1923年の建築家・葛城が遺した「水都の設計図」。日々の風景の下に沈んだ、都市のもう一つの記憶を辿る。</p>
     </a>
 
     <div class="scenario-card" style="opacity: 0.5; cursor: not-allowed;">
-        <div class="status-badge" style="color:#ef4444; background: rgba(239, 68, 68, 0.1);">CLASSIFIED</div>
-        <h2 class="scenario-title">第2弾：[DATA_ENCRYPTED]</h2>
-        <p class="scenario-desc">現在アクセス権限がありません。次なる記録の復元をお待ちください。</p>
+        <div class="status-badge" style="border-color: rgba(0,0,0,0.1); color: rgba(0,0,0,0.3);">封印中</div>
+        <h2 class="scenario-title">第2巻：[未解読の記録]</h2>
+        <p class="scenario-desc">現在はまだページが開かれていません。次なる手記の発見をお待ちください。</p>
     </div>
 </div>
 

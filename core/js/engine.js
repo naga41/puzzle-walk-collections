@@ -96,6 +96,15 @@ class PuzzleWalkEngine {
                 html += `<div class="monologue">${ch.monologue}</div>`;
             }
 
+            if (ch.imageUrl) {
+                html += `<div class="prop-image-wrap">
+                            <img src="${ch.imageUrl}" class="prop-image" alt="手記の画像">`;
+                if (ch.imageCaption) {
+                    html += `<div class="prop-caption">${ch.imageCaption}</div>`;
+                }
+                html += `</div>`;
+            }
+
             if (ch.content) {
                 html += `<div class="html-content">${ch.content.join('')}</div>`;
             }
