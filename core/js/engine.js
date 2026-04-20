@@ -184,16 +184,26 @@ class PuzzleWalkEngine {
         
         setTimeout(() => {
             if (finalReward) {
-                this.container.innerHTML = `
-                    <div class="fade-in" style="text-align:center; padding-top: 40px;">
-                        <h1 style="color:#bae6fd; font-size:1.8rem; letter-spacing: 4px; font-weight:300;">${finalReward.title}</h1>
-                        <div style="line-height:2.4; text-align:left; margin-top:50px; font-size: 1rem; font-weight: 300;">
+                let html = `<div class="fade-in" style="text-align:center; padding-top: 40px;">
+                    <h1 style="color:#bae6fd; font-size:1.8rem; letter-spacing: 4px; font-weight:300;">${finalReward.title}</h1>`;
+                
+                if (finalReward.imageUrl) {
+                    html += `
+                        <div class="delayed-show" style="margin: 40px -20px; overflow:hidden;">
+                            <img src="${finalReward.imageUrl}" style="width:100%; border-radius:4px; opacity:0.85; filter: contrast(1.1) brightness(0.9); box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                        </div>
+                    `;
+                }
+
+                html += `<div class="delayed-show" style="line-height:2.4; text-align:left; margin-top:30px; font-size: 1rem; font-weight: 300;">
                             ${finalReward.content.join('')}
                         </div>
-                        <p class="delayed-show" style="margin-top:80px; font-size:0.85rem; color:#7dd3fc; letter-spacing: 2px;">${finalReward.footer}</p>
-                        <button class="btn delayed-show" onclick="location.href='index.html'" style="border-color:#7dd3fc; color:#7dd3fc; margin:80px auto; width: 80%;">${finalReward.returnPortalLabel}</button>
-                    </div>
-                `;
+                        <div class="clear-stamp" style="margin-top: 60px;">THE END</div>
+                        <p class="fade-in" style="margin-top:20px; font-size:0.85rem; color:#7dd3fc; letter-spacing: 2px; animation-delay: 5s;">${finalReward.footer}</p>
+                        <button class="btn fade-in" onclick="location.href='index.html'" style="border-color:#7dd3fc; color:#7dd3fc; margin:80px auto; width: 80%; animation-delay: 6s;">${finalReward.returnPortalLabel}</button>
+                    </div>`;
+                
+                this.container.innerHTML = html;
             } else {
                  this.container.innerHTML = `<h1 class="fade-in" style="text-align:center">記憶の復元完了</h1>`;
             }
