@@ -42,7 +42,8 @@
       "imageUrl": "contents/tokyo-rediscovery/assets/ship.png",
       "imageCaption": "——葛城の手記に挟まれていた古いスケッチ",
       "content": [
-        "<p>東京駅八重洲口。かつての江戸城「外堀」が流れていた水の境界線だ。</p><p>この地の名の由来となった男、ヤン・ヨーステンが漂着した船「リーフデ号」。しかし、その船には日本へ来る前の**「以前の名前」**が存在した。葛城が「起点のキー」として設定したその名を特定せよ。</p>"
+        "<p>東京駅八重洲口。かつての江戸城「外堀」が流れていた水の境界線だ。</p><p>この地の名の由来となった男、ヤン・ヨーステンが漂着した船「リーフデ号」。しかし、その船には日本へ来る前の**「以前の名前」**が存在した。葛城が「起点のキー」として設定したその名を特定せよ。</p>",
+        "<div style=\"margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed rgba(90, 70, 50, 0.3); padding-top: 15px;\"><span style=\"color: #736050;\">【史実アーカイブ】</span> <a href=\"https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%BC%E3%83%95%E3%83%87%E5%8F%B7\" target=\"_blank\" style=\"color: #736050;\">リーフデ号（エラスムス号）の漂着と八重洲の由来</a></div>"
       ],
       "answerKeyword": "エラスムス",
       "successMessage": "……風景の解像度が、少し上がった。",
@@ -64,7 +65,8 @@
       "imageUrl": "contents/tokyo-rediscovery/assets/kirin.png",
       "imageCaption": "——1923年当時のフィルム写真",
       "content": [
-        "<p>日本橋の中央。そこには日本の道路の起点を示す「道路元標」がある。その傍らで、未来を見据えるように立つ「麒麟像」を観測せよ。</p><p>麒麟は、ある「紋章」が刻まれた盾をその手で押さえている。その紋章には何が描かれているか？</p>"
+        "<p>日本橋の中央。そこには日本の道路の起点を示す「道路元標」がある。その傍らで、未来を見据えるように立つ「麒麟像」を観測せよ。</p><p>麒麟は、ある「紋章」が刻まれた盾をその手で押さえている。その紋章には何が描かれているか？</p>",
+        "<div style=\"margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed rgba(90, 70, 50, 0.3); padding-top: 15px;\"><span style=\"color: #736050;\">【史実アーカイブ】</span> <a href=\"https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E6%A9%8B_(%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E3%81%AE%E6%A9%8B)\" target=\"_blank\" style=\"color: #736050;\">日本橋の装飾彫刻と麒麟像に込められた「繁栄」の願い</a></div>"
       ],
       "answerKeyword": "東京都",
       "successMessage": "……風景の解像度が、少し上がった。",
@@ -84,7 +86,8 @@
       "title": "同期する街の鼓動",
       "monologue": "「近代的なビル群に囲まれても、この街の『揺らぎ』は消えない。人形町。ここには江戸から続く同期信号（クロック）が流れている。葛城は、効率だけを求めて壊される都市を危惧し、人々の営みのリズムを設計図に組み込んだ。」",
       "content": [
-        "<p>人形町通りの両側にそびえる2つの「からくり櫓」。これは単なる時計台ではない。街の歴史を同期させるための発信器だ。</p><p>特に「町火消」を模した櫓を観測せよ。櫓の幕や看板に記された、江戸の街を火災から守り続けた者たちの「総称」を導き出せ。</p>"
+        "<p>人形町通りの両側にそびえる2つの「からくり櫓」。これは単なる時計台ではない。街の歴史を同期させるための発信器だ。</p><p>特に「町火消」を模した櫓を観測せよ。櫓の幕や看板に記された、江戸の街を火災から守り続けた者たちの「総称」を導き出せ。</p>",
+        "<div style=\"margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed rgba(90, 70, 50, 0.3); padding-top: 15px;\"><span style=\"color: #736050;\">【史実アーカイブ】</span> <a href=\"https://ja.wikipedia.org/wiki/%E7%94%BA%E7%81%AB%E6%B6%88\" target=\"_blank\" style=\"color: #736050;\">江戸の町火消といろは四十八組の歴史</a></div>"
       ],
       "answerKeyword": "火消し",
       "successMessage": "……彼らの営みが、微かに聞こえた。",
@@ -105,7 +108,8 @@
       "imageUrl": "contents/tokyo-rediscovery/assets/bridge.png",
       "imageCaption": "——葛城が書き残した『世界一美しい吊り橋』の青写真",
       "content": [
-        "<p>甘酒横丁の路地を抜け、隅田川のテラスへ出よ。目の前に現れる青い吊り橋「清洲橋」をスキャンせよ。</p><p>葛城が「世界一美しい」と称賛し、東京の再建モデルとしたドイツの**「都市名」**を入力せよ。</p>"
+        "<p>甘酒横丁の路地を抜け、隅田川のテラスへ出よ。目の前に現れる青い吊り橋「清洲橋」をスキャンせよ。</p><p>葛城が「世界一美しい」と称賛し、東京の再建モデルとしたドイツの**「都市名」**を入力せよ。</p>",
+        "<div style=\"margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed rgba(90, 70, 50, 0.3); padding-top: 15px;\"><span style=\"color: #736050;\">【史実アーカイブ】</span> <a href=\"https://ja.wikipedia.org/wiki/%E6%B8%85%E6%B4%B2%E6%A9%8B\" target=\"_blank\" style=\"color: #736050;\">震災復興の華・清洲橋とケルンの吊り橋モデル</a></div>"
       ],
       "answerKeyword": "ケルン",
       "successMessage": "……水面が揺れ、道が繋がった。",
@@ -124,7 +128,8 @@
       "title": "水の記憶",
       "monologue": "「設計図は完成した。だが、それは私の手元にはない。未来の観測者がすべての座標を繋ぎ、最後の祈りを捧げたとき、真の東京が展開されるだろう。最後に立ち返るべきは、我々の命の源流だ。」",
       "content": [
-        "<p>最終座標、水天宮。ここは幾度もの破壊と再生を繰り返しながら、街の記憶をアーカイブし続けてきた。境内の「子宝いぬ」の周りを囲む十二支の円盤を観測せよ。</p><p>円盤の中心に刻まれた「最後の一文字」を入力せよ。それが、葛城が最も守りたかった『水都』の象徴だ。</p>"
+        "<p>最終座標、水天宮。ここは幾度もの破壊と再生を繰り返しながら、街の記憶をアーカイブし続けてきた。境内の「子宝いぬ」の周りを囲む十二支の円盤を観測せよ。</p><p>円盤の中心に刻まれた「最後の一文字」を入力せよ。それが、葛城が最も守りたかった『水都』の象徴だ。</p>",
+        "<div style=\"margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed rgba(90, 70, 50, 0.3); padding-top: 15px;\"><span style=\"color: #736050;\">【史実アーカイブ】</span> <a href=\"https://ja.wikipedia.org/wiki/%E6%B0%B4%E5%A4%A9%E5%AE%AE_(%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA)\" target=\"_blank\" style=\"color: #736050;\">有馬頼徳による水天宮の勧請と歴史</a></div>"
       ],
       "answerKeyword": "水",
       "failureMessage": "……文字が弾かれた。それは最も身近なものだ。",
