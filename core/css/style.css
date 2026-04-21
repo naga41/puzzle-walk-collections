@@ -108,42 +108,65 @@ header {
 }
 
 .card::after {
-    content: ""; /* テキストのにじみ・紙のシワのようなノイズをうっすら重ねる */
+    content: "";
     position: absolute; top:0; left:0; right:0; bottom:0;
     pointer-events: none;
     background: var(--bg-texture);
+    z-index: 10;
 }
 
 .locked {
-    filter: blur(3px) grayscale(0.5);
-    opacity: 0.25;
+    filter: blur(8px) grayscale(1);
+    opacity: 0.15;
     pointer-events: none;
-    transform: scale(0.98);
+    transform: scale(0.95);
 }
 
-.briefing { background: transparent; border: none; box-shadow: none; padding: 0 10px; margin-top: 20px; border-left: 1px solid var(--border); }
+.briefing { 
+    background: transparent; border: none; box-shadow: none; padding: 0 10px; margin-top: 20px; 
+    border-left: 1px solid var(--border); 
+}
 
 /* プロップ画像 */
 .prop-image-wrap {
-    margin: 20px 0;
+    margin: 30px 0;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+/*ビネット効果用のオーバーレイ*/
+.prop-image-wrap::after {
+    content: "";
+    position: absolute; top:0; left:0; right:0; bottom:0;
+    background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.3) 100%);
+    pointer-events: none;
+    z-index: 2;
 }
 
 .prop-image {
     max-width: 100%;
     height: auto;
-    border-radius: 2px;
-    mix-blend-mode: multiply; /* 白背景を透過し、下の紙色に馴染ませる */
-    filter: sepia(0.3) contrast(1.1) opacity(0.85); /* 色褪せたトーン */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    filter: sepia(0.2) contrast(1.2) brightness(0.9) grayscale(0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.card:hover .prop-image {
+    transform: scale(1.02);
 }
 
 .prop-caption {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--accent);
-    margin-top: 8px;
+    margin-top: 12px;
     font-style: italic;
     text-align: right;
+    letter-spacing: 1px;
+    opacity: 0.8;
 }
 
 .chapter-label { color: var(--accent); font-size: 0.75rem; font-weight: 400; letter-spacing: 3px; margin-bottom: 5px; }
@@ -161,9 +184,29 @@ h2 { font-size: 1.4rem; margin: 0 0 20px 0; font-weight: 400; border-bottom: 1px
 .html-content { 
     font-size: 0.95rem; line-height: 2; font-weight: 400; 
     color: var(--text-main);
-    text-shadow: 0px 0px 1px rgba(62, 49, 36, 0.4); /* インクの微細な滲み */
+    text-shadow: 0px 0px 1px rgba(62, 49, 36, 0.2); /* にじみを抑えめに */
 }
-.html-content p { margin-bottom: 1.5em; }
+.html-content p { margin-bottom: 2em; }
+.html-content strong { color: var(--accent); font-weight: 700; }
+
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 40px auto;
+    width: 60%;
+    position: relative;
+    overflow: visible;
+}
+.section-divider::after {
+    content: "◈";
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg-base);
+    padding: 0 10px;
+    font-size: 0.7rem;
+    color: var(--accent);
+}
 
 .btn {
     display: block; width: 100%; padding: 12px; margin-top: 25px;
@@ -234,7 +277,12 @@ input:focus { border-color: var(--accent); }
     100% { transform: rotate(-5deg) scale(1); opacity: 0.8; }
 }
 
-footer { text-align: center; padding: 40px; font-size: 0.7rem; color: var(--accent); letter-spacing: 1px; }
+footer { 
+    text-align: center; padding: 60px 40px; font-size: 0.65rem; color: var(--accent); letter-spacing: 2px; 
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+    opacity: 0.6;
+}
 
 /* 共通ローダー */
 #loader { text-align: center; padding: 50px; color: var(--accent); font-weight: 300; letter-spacing: 2px; }
