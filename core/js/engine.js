@@ -12,6 +12,7 @@ class PuzzleWalkEngine {
     async init() {
         const urlParams = new URLSearchParams(window.location.search);
         const contentId = urlParams.get('content') || 'tokyo-rediscovery'; 
+        this.isDemoMode = urlParams.get('demo') === 'true';
 
         try {
             const response = await fetch(`contents/${contentId}/scenario.json`);
@@ -116,7 +117,11 @@ class PuzzleWalkEngine {
                 html += `<div id="feedback${ch.id}" class="feedback-msg"></div>`;
             } else if (ch.type === 'briefing') {
                 // For briefing, button to unlock next
-                html += `<button class="btn" onclick="engine.unlockChapter('${ch.nextChapterId}')">${ch.actionLabel}</button>`;
+                if (this.isDemoMode) {
+                    html += `<button class="btn" onclick="return false;" style="opacity:0.6; cursor:default; border-style:dashed; font-size: 0.8rem; line-height:1.8;">【プレビュー領域はここまで】<br><span style="font-size:0.7rem;">続きは実際の都市でお待ちしています</span></button>`;
+                } else {
+                    html += `<button class="btn" onclick="engine.unlockChapter('${ch.nextChapterId}')">${ch.actionLabel}</button>`;
+                }
             }
 
             // Map and Hints
