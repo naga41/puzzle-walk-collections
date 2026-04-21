@@ -58,32 +58,50 @@ class PuzzleWalkEngine {
             return;
         }
 
-        // Sleep helper
+        // Tap guide
+        const guide = document.createElement('div');
+        guide.style.cssText = 'position:absolute; bottom:40px; left:0; width:100%; text-align:center; color:var(--accent); font-size:0.6rem; letter-spacing:4px; opacity:0; transition:opacity 1s; font-family:sans-serif;';
+        guide.innerText = 'TAP TO CONTINUE';
+        this.bootScreen.appendChild(guide);
+        setTimeout(() => guide.style.opacity = '0.4', 3000);
+
+        const waitForNext = () => {
+            return new Promise(resolve => {
+                const handler = () => {
+                    this.bootScreen.removeEventListener('click', handler);
+                    resolve();
+                };
+                this.bootScreen.addEventListener('click', handler);
+            });
+        };
+
         const sleep = ms => new Promise(r => setTimeout(r, ms));
 
         for (let i = 0; i < prologueLines.length; i++) {
             const span = document.createElement('div');
             span.className = 'prologue-text';
             span.innerHTML = prologueLines[i];
-            logContainer.innerHTML = ''; // クリアして中央へ
+            logContainer.innerHTML = '';
             logContainer.appendChild(span);
             
-            // フェードイン
             await sleep(100);
             span.classList.add('show');
             
-            // 待機 (文章の長さに応じて)
-            const waitTime = Math.max(2500, prologueLines[i].length * 100);
-            await sleep(waitTime);
+            // 最後の一文以外はタップを待つ
+            if (i < prologueLines.length - 1) {
+                await waitForNext();
+            } else {
+                // 最後の一文は余韻のために自動遷移
+                await sleep(Math.max(3000, prologueLines[i].length * 100));
+            }
             
-            // フェードアウト
             span.classList.remove('show');
-            await sleep(1500); // 完全に消えるのを待つ
+            await sleep(1000); 
         }
 
-        // 全て終わったら画面遷移
         this.bootScreen.style.opacity = '0';
-        setTimeout(() => this.bootScreen.style.display = 'none', 2000);
+        guide.style.opacity = '0';
+        setTimeout(() => this.bootScreen.style.display = 'none', 1500);
     }
 
     renderScenario(chapters) {
