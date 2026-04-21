@@ -141,6 +141,7 @@ class PuzzleWalkEngine {
     }
 
     unlockChapter(chapterId) {
+        if (this.isDemoMode) return; // デモモード時は関数レベルで強制ブロック
         if (!chapterId) return;
         const target = document.getElementById(`ch${chapterId}`);
         if(target) {
@@ -164,6 +165,7 @@ class PuzzleWalkEngine {
     }
 
     checkAnswer(chapterId, correctKeyword, isFinal, nextChapterId, successMsg, failMsg) {
+        if (this.isDemoMode) return; // デモモード時は判定自体をブロック
         const inputElement = document.getElementById(`ans${chapterId}`);
         if (!inputElement) return;
         
