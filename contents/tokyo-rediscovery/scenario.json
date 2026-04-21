@@ -4,10 +4,10 @@
     "id": "tokyo-rediscovery",
     "description": "1923年の建築家・葛城が遺した「水都の設計図」の記憶を辿る",
     "prologue": [
-      "1923年。ひとりの建築家が遺した、一篇の手記がある。",
-      "そこには、震災によって失われた『水都』の理想が、静かな言葉で綴られていた。",
-      "あなたが今歩いているこの街の底には、その記憶が、今も形を変えて息づいている。",
-      "——これは、都市の『失われた時間』を静かに辿る、思索の旅である。"
+      "東京には、二層の時間が存在します。",
+      "ひとつは、あなたが今見ている、近代化された均一な都市の時間。",
+      "もうひとつは、地底と記憶の中に眠る、震災によって断絶された理想の時間。",
+      "建築家・葛城が遺した手記を紐解き、この街の『真実の輪郭』を辿る旅を始めましょう。"
     ]
   },
   "theme": {
@@ -25,14 +25,16 @@
       "label": "記録の断片 00",
       "title": "建築家の遺録",
       "content": [
-        "<p>建築家・葛城は、関東大震災の直前まで、この東京を『水と人が共生する都市』へと再編する計画に没頭していました。しかし、その夢は火災と近代化の波に飲まれ、公の記録からは跡形もなく消え去りました。</p>",
-        "<p style=\"margin: 25px 15px; font-size:0.9rem; color:#736050; line-height:1.8; border-left: 2px solid var(--border); padding-left:15px;\">『都市とは、ただの石やコンクリートの集積ではない。それは記憶の層が重なり、水の如く流動し続ける有機体であるべきだ。私はその理想を、街の細部に微かな影として投影しておくことにした。』</p>",
-        "<p>彼の遺した言葉が、今も街の至る所に『静かな違和感』として残っています。私たちは、その断片をひとつずつ拾い集め、彼が守ろうとした都市の輪郭を確かめる必要があります。</p>"
+        "<p>かつてこの東京を『東洋のヴェニス』へと造り替えようとした一人の男がいました。若き建築家・葛城。彼は、単なる道路の拡張ではなく、水路と緑が有機的に結びつく、生命力溢れる都市の再編を夢見ていました。</p>",
+        "<p>しかし、1923年の関東大震災はその夢を無慈悲に焼き尽くします。復興事業は効率と速度を最優先し、彼の理想とした『水都』の計画は、公的な記録から抹消されました。それでも葛城は、再建される街の至る所に、自らの設計思想の断片を密かに刻印しました。</p>",
+        "<p style=\"margin-top:20px; font-weight:bold; color:var(--accent);\">【最初の観測地点への導き】</p>",
+        "<p>思索の旅を始めるため、まずは<strong>『東京駅 八重洲中央口（地上）』</strong>へ向かってください。広大な駅舎を出て、目の前にまっすぐ伸びる『八重洲通り』の入り口が、あなたの最初の観測開始地点です。</p>",
+        "<p><a href=\"https://www.google.com/maps/search/?api=1&query=東京駅+八重洲中央口\" target=\"_blank\" style=\"color:#3e3124; text-decoration:underline;\">地図で開始地点を確認する</a></p>"
       ],
       "actionLabel": "手記を開く",
       "nextChapterId": "1",
       "imageUrl": "contents/tokyo-rediscovery/assets/blueprint_final.png",
-      "imageCaption": "葛城が遺した、1923年当時の都市計画の青写真",
+      "imageCaption": "1923年、震災の猛火の中で消失したはずの、葛城が描いた『水都』の青写真。",
       "successMessage": "手記の最初の頁が、静かに開かれた。",
       "postSolveHTML": "<div style=\"margin-top: 30px; font-size: 0.85rem; border: 1px solid var(--border); padding: 20px; border-radius: 4px; background: rgba(0,0,0,0.02); line-height:2;\"><strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【次なる地点への導き】</strong>東京駅・八重洲口方面へ向かってください。まずは都市の玄関口、かつての水の境界線へと足を運びましょう。<br><a href=\"https://www.google.com/maps/search/?api=1&query=東京駅+八重洲中央口\" target=\"_blank\" style=\"color:#3e3124; text-decoration:underline;\">地図で確認する</a></div>"
     },
@@ -41,12 +43,13 @@
       "type": "challenge",
       "label": "記録の断片 01",
       "title": "境界の記録",
-      "monologue": "「1600年、漂着した一艘の船がこの地に新たな時間を持ち込んだ。八重洲という名は、異国の航海士がこの地に根を下ろした証だ。かつてここは江戸城の外堀が流れ、波打ち際と陸地の境界であった。私は、この境界線こそが都市の成長の起点であると考え、ある名前を記録の中に伏せておいた。それは、彼が日本へ至るまでの苦難を共にした船の、真の名前だ。」",
+      "monologue": "「1923年、八重洲通りにて。かつてこの地は『海』だった。徳川家康が江戸に入った頃、今の東京駅周辺には日比谷入江と呼ばれる穏やかな海が広がり、波が打ち寄せていたのだ。家康はそこに、漂流の末に辿り着いた航海士ヤン・ヨーステンの屋敷を構えさせた。彼の名が訛り、やがて『八重洲（やえす）』という地名が生まれた。皮肉なことに、かつて丸の内側にあったその地名は、明治の区画整理でこの駅の東側へと押し出された。地名とは、都市が脱ぎ捨てた古い皮膚のようなものだ。私はこの地に、彼のもうひとつの記憶を封じることにした。」",
       "imageUrl": "contents/tokyo-rediscovery/assets/ship.png",
       "imageCaption": "——葛城の手記に挟まれていた古いスケッチ",
       "content": [
-        "<p>東京駅周辺の『八重洲』という地名。かつてここは、江戸城の外堀が豊かな水を湛えていた場所です。この名の由来となったヤン・ヨーステンが漂流の末に辿り着いた船『リーフデ号』。その船には、オランダを出航した際の<strong>『以前の名前』</strong>がありました。</p>",
-        "<p>八重洲通りにある記念碑、あるいは八重洲地下街にある彼の像を訪ねてください。建築家・葛城が都市の起点として重視したその名前、人文学者の名に由来するその文字を特定してください。</p>"
+        "<p>東京駅・八重洲。ここは、江戸城の外堀が豊かな水を湛えていた物理的な境界線です。建築家・葛城は、八重洲の地名の由来となったオランダ人、ヤン・ヨーステン（日本名：耶揚子）の数奇な運命に、自らの境遇を重ねていたのかもしれません。</p>",
+        "<p>ヨーステンと共に日本へ漂着した波乱の船『リーフデ号（愛号）』。しかし、その船がオランダを出航した際の<strong>『以前の名前』</strong>を知る者は少ないでしょう。それは高名な人文学者の名にちなんだものでした。</p>",
+        "<p>八重洲通り中央の分離帯にある記念碑、または地下街の広場に立つヨーステンの像を観測し、その名を特定してください。それが、この都市の記憶を解く最初の鍵となります。</p>"
       ],
       "answerKeyword": "エラスムス",
       "successMessage": "……風景の解像度が、少し上がった。",
@@ -58,19 +61,20 @@
       },
       "hint": "リーフデ(Liefde)はオランダ語で「愛」。以前はオランダの学者の名で呼ばれていた。「エ〇〇ムス」。八重洲通りの記念碑か、地下街にある像をスキャンせよ。",
       "nextChapterId": "2",
-      "postSolveHTML": "<div style=\"margin-top: 30px; font-size: 0.85rem; border: 1px solid var(--border); padding: 20px; border-radius: 4px; background: rgba(0,0,0,0.02); line-height:2;\"><strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【史実アーカイブ】</strong>船の名前は『エラスムス号』。人文学者デジデリウス・エラスムスにちなんだものです。<br><hr style=\"border:none; border-top:1px dashed var(--border); margin:15px 0;\"><strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【次なる地点への導き】</strong>八重洲通りを東へ、日本橋方面へ進んでください。約10分、かつての運河の跡を感じながら、麒麟の像が立つ石造りの橋を目指します。<br><a href=\"https://www.google.com/maps/search/?api=1&query=日本橋+麒麟像\" target=\"_blank\" style=\"color:#3e3124; text-decoration:underline;\">地図で確認する</a></div>"
+      "postSolveHTML": "\n<div style=\"margin-top: 30px; font-size: 0.85rem; border: 1px solid var(--border); padding: 20px; border-radius: 4px; background: rgba(0,0,0,0.02); line-height:2;\">\n    <strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【史実アーカイブ】</strong>\n    答えは<strong>『エラスムス号』</strong>。この船は出航当初、オランダの偉大な人文学者デジデリウス・エラスムスにちなんで名付けられました。船尾には彼の像が飾られており、現在も佐野市の寺院に重要文化財として保管されています。\n    <hr style=\"border:none; border-top:1px dashed var(--border); margin:15px 0;\">\n    <strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【次なる地点への導き：日本橋へ】</strong>\n    そのまま八重洲通りを東へ500mほど、まっすぐ進んでください。中央通りの交差点を左（北）に曲がれば、重厚な石造りの橋が見えてきます。\n    道中、街灯の意匠を見てください。所々に『橋と波』のデザインが隠されており、かつてここが運河の街であった気配を今に伝えています。\n    <br><a href=\"https://www.google.com/maps/search/?api=1&query=日本橋+麒麟像\" target=\"_blank\" style=\"color:#3e3124; text-decoration:underline;\">地図で次の地点を確認</a>\n</div>\n"
     },
     {
       "id": "2",
       "type": "challenge",
       "label": "記録の断片 02",
       "title": "心室の守護",
-      "monologue": "「日本橋。五街道の起点。都市の心室。1923年の火災の際も、人々はこの橋の尊厳を守り抜いた。私は、この橋に施された装飾、とりわけ翼を持つ獣の力強さに魅せられた。それは単なる飾りではなく、再生を誓う都市の意志の現れだ。彼が抱える盾には、現在もこの地がどこへ属しているかを示す印が刻まれている。それを見落としてはならない。」",
+      "monologue": "「日本橋。1923年、橋の欄干には猛火によって焼き付いた煤の色が残っていた。装飾顧問を務めた建築界の重鎮・妻木頼黄（つまき よりなか）は、この橋を西洋のネオ・バロック様式と日本の青銅技術を融合させた、世界に類を見ない芸術へと昇華させた。彼が橋の中央に配した『麒麟（きりん）』。本来、麒麟に翼はない。だが妻木は、日本の四通八達の起点であるこの場所から、全国へ、そして世界へ羽ばたく東京の繁栄を願い、あえて翼を授けた。その麒麟が抱える盾の紋章……それを見落としてはならない。」",
       "imageUrl": "contents/tokyo-rediscovery/assets/kirin.png",
       "imageCaption": "——1923年当時のフィルム写真",
       "content": [
-        "<p>日本橋の中央、日本の道路の出発点である『日本国道路元標』の傍ら。そこに立つ『麒麟像』を仰ぎ見てください。建築家・葛城は、この像の放つ再生への意志に深く共感し、その細部に注目しました。</p>",
-        "<p>麒麟がその手で固く押さえている盾。そこには、この地がいまどこに属しているかを示す『紋章（文字）』が含まれています。その盾に刻まれた印を特定してください。</p>"
+        "<p>日本橋は、江戸開府と同時に架けられた、日本の全ての道の出発点です。現在の石橋は1911年に架け替えられた20代目にあたります。建築家・葛城は、この橋の装飾に込められた『和洋折衷』の美学に、自らの都市計画のヒントを見出していました。</p>",
+        "<p>橋の中央、道路の真ん中に立つ青銅の麒麟像。その鋭い爪で押さえつけられている盾。そこには、この地がどこに属しているかを示す<strong>『ある印（文字）』</strong>が含まれています。橋の歩道から、その勇壮な姿をじっくりと観測してください。</p>",
+        "<p style=\"font-size:0.85rem; color:#736050; margin-top:20px;\">※注意：日本橋の欄干の石材をよく見てください。黒ずんだ跡や、欠けたような傷が見つかりませんか？ それは100年前の震災、そして後の空襲の劫火を耐え抜いた『歴史の傷跡』そのものです。</p>"
       ],
       "answerKeyword": "東京都",
       "successMessage": "……風景の解像度が、少し上がった。",
@@ -82,17 +86,17 @@
       },
       "hint": "像の台座、あるいは盾を詳しく見よ。「東京都」の紋章、あるいはそれを構成する植物の意匠が隠されている。",
       "nextChapterId": "3",
-      "postSolveHTML": "<div style=\"margin-top: 30px; font-size: 0.85rem; border: 1px solid var(--border); padding: 20px; border-radius: 4px; background: rgba(0,0,0,0.02); line-height:2;\"><strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【史実アーカイブ】</strong>その紋章は『東京都（当時は東京市）』のものです。麒麟が東京の繁栄を守っている姿を現しています。<br><hr style=\"border:none; border-top:1px dashed var(--border); margin:15px 0;\"><strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【次なる地点への導き】</strong>橋を渡り、人形町方面へ向かってください。徒歩約15分。歴史ある街並みが残るエリアへ、かつてこの橋を渡ったであろう多くの旅人たちの足跡を辿るように進みます。<br><a href=\"https://www.google.com/maps/search/?api=1&query=人形町+からくり櫓\" target=\"_blank\" style=\"color:#3e3124; text-decoration:underline;\">地図で確認する</a></div>"
+      "postSolveHTML": "\n<div style=\"margin-top: 30px; font-size: 0.85rem; border: 1px solid var(--border); padding: 20px; border-radius: 4px; background: rgba(0,0,0,0.02); line-height:2;\">\n    <strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【史実アーカイブ】</strong>\n    答えは<strong>『東京都』</strong>（当時は東京市）。その市章は「太陽から放たれる光」をイメージした江戸時代からの歴史を持つものです。四隅に配置された獅子は、ロンドンのトラファルガー広場のライオンなどを参考に、東京を守る守護獣として設置されました。\n    <hr style=\"border:none; border-top:1px dashed var(--border); margin:15px 0;\">\n    <strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【次なる地点への導き：人形町へ】</strong>\n    橋を北へと渡り、三越やコレド室町が立ち並ぶ美しい街並みを歩いてください。15分ほどの散策です。かつてこの一帯は呉服商が軒を連ね、江戸の経済を支えた心臓部でした。\n    三越百貨店を過ぎた十字路を右に曲がり、人形町通りを目指してください。\n    <br><a href=\"https://www.google.com/maps/search/?api=1&query=人形町+からくり櫓\" target=\"_blank\" style=\"color:#3e3124; text-decoration:underline;\">地図で次の地点を確認</a>\n</div>\n"
     },
     {
       "id": "3",
       "type": "challenge",
       "label": "記録の断片 03",
       "title": "営みの同期",
-      "monologue": "「人形町。ここには、近代的な変化に抗うような、古き良き江戸の営みのリズムが残っている。私はかつて、この街の至る所に火災への備えと、人々の熱気が同居していることに驚かされた。時計の櫓（やぐら）が刻んでいるのは、単なる時間ではない。この街を守り続けてきた者たちの誇り、その継続性だ。」",
+      "monologue": "「1923年、人形町。ここはかつて吉原遊郭があり、後に歌舞伎や人形芝居の小屋が立ち並んだ、都市の『熱狂』の集積地だった。葛城は日記に綴っている。ただ冷たい石の街を作るのではなく、そこに住まう人々の祭り、熱意、そして伝統そのものを建築の『同期信号』として組み込むべきだと。からくり櫓の歯車が刻んでいるのは、便宜的な時刻ではない。江戸から続く、粋（いき）な火消したちが街を守り抜いてきた誇りだ。その幕に記された名を、声に出さずとも心に刻め。」",
       "content": [
-        "<p>人形町通りに立つ、2つの『からくり櫓』。それぞれがこの街の歴史的な役割を象徴しています。建築家・葛城は、都市の機能美だけでなく、そこで暮らす人々の生活のリズムを保存しようと考えました。</p>",
-        "<p>江戸の街を火災から守り続けてきた者たちを模した櫓の前に立ち、彼らを指すその『総称』を導き出してください。幕や案内板に、彼らの名前が刻まれているはずです。</p>"
+        "<p>人形町。江戸の庶民文化と娯楽の中心地です。かつてのこの地には人形を操る『傀儡師（くぐつまわし）』が多く住んでいたことが、地名の由来となりました。建築家・葛城は、近代的なビルに囲まれながらも、この地特有の情緒が消えない仕組みに注目しました。</p>",
+        "<p>通りにある2つの大きな『からくり櫓』。それぞれがこの地の歴史的な物語を語っています。特に『町火消（まちびけし）』を表現した櫓に注目してください。江戸は『火事と喧嘩は江戸の華』と言われるほど火災が多く、彼らの存在こそが街の存続の要でした。幕や案内板に記された、その誇り高き<strong>『職業の総称』</strong>を入力してください。</p>"
       ],
       "answerKeyword": "火消し",
       "successMessage": "……彼らの営みが、微かに聞こえた。",
@@ -103,7 +107,7 @@
         "label": "地図で現在地を確認"
       },
       "nextChapterId": "4",
-      "postSolveHTML": "<div style=\"margin-top: 30px; font-size: 0.85rem; border: 1px solid var(--border); padding: 20px; border-radius: 4px; background: rgba(0,0,0,0.02); line-height:2;\"><strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【史実アーカイブ】</strong>答えは『火消し』。江戸情緒をいまに伝えるシンボルです。<br><hr style=\"border:none; border-top:1px dashed var(--border); margin:15px 0;\"><strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【次なる地点への導き】</strong>甘酒横丁を抜け、隅田川の河畔を目指して東へ歩いてください。徒歩10分ほどで、川面に映える青い吊り橋が見えてきます。<br><a href=\"https://www.google.com/maps/search/?api=1&query=清洲橋\" target=\"_blank\" style=\"color:#3e3124; text-decoration:underline;\">地図で確認する</a></div>",
+      "postSolveHTML": "\n<div style=\"margin-top: 30px; font-size: 0.85rem; border: 1px solid var(--border); padding: 20px; border-radius: 4px; background: rgba(0,0,0,0.02); line-height:2;\">\n    <strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【史実アーカイブ】</strong>\n    答えは<strong>『火消し』</strong>。江戸の町火消は「いろは四十八組」に分かれ、命懸けで延焼を防ぎました。この櫓は、その伝統を今に伝えるモニュメントです。\n    <hr style=\"border:none; border-top:1px dashed var(--border); margin:15px 0;\">\n    <strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【次なる地点への導き：清洲橋へ】</strong>\n    甘酒横丁の情緒ある路地を通り抜け、どんどん東（隅田川方面）へと歩いてください。徒歩10分ほど。\n    途中の路地裏には、今も江戸の面影を残す小さな稲荷神社や古い看板が点在しています。隅田川の土手が見えてきたら、そこには葛城の『理想の結実』が待っています。\n    <br><a href=\"https://www.google.com/maps/search/?api=1&query=清洲橋\" target=\"_blank\" style=\"color:#3e3124; text-decoration:underline;\">地図で次の地点を確認</a>\n</div>\n",
       "imageUrl": "contents/tokyo-rediscovery/assets/clocks_sketch.png",
       "imageCaption": "葛城が書き残した、江戸の熱狂を同期させるための機械仕掛けの設計図"
     },
@@ -112,12 +116,12 @@
       "type": "challenge",
       "label": "記録の断片 04",
       "title": "水面の投影",
-      "monologue": "「1923年。瓦礫の山となった隅田川の岸辺で、私は誓った。再びこの川に、世界で最も美しいと讃えられる橋の姿を描き出すと。それはドイツの古都で見た、あの優美な吊り橋の記憶の投影だった。橋とは単なる移動の手段ではなく、向こう岸という『未来』への架け橋なのだ。」",
+      "monologue": "「1923年、震災後。私は隅田川のテラスに立ち、かつての粗末な木の橋が流された虚無の川面を見つめていた。復興事業において、私はこの街に、世界で最も美しいと謳われたドイツ・ケルンの吊り橋の姿を投影することを誓った。清澄と中洲を結ぶこの『清洲橋（きよすばし）』は、単なる移動の手段ではない。鋼鉄のなだらかな曲線こそが、我々が目指すべき『水都』の象徴なのだ。今、この青き橋の袂に立って、かつての建築家たちが夢見た美を共に観測せよ。」",
       "imageUrl": "contents/tokyo-rediscovery/assets/bridge.png",
       "imageCaption": "——葛城が書き残した『世界一美しい吊り橋』の青写真",
       "content": [
-        "<p>隅田川のテラスに佇み、目の前の『清洲橋（きよすばし）』を見つめてください。建築家・葛城が、戦後復興の希望を込めて、当時の世界で最も美しいと言われたドイツの橋をモデルとして架けさせました。</p>",
-        "<p>その設計のインスピレーションの元となった、ドイツの<strong>『ある都市の名前』</strong>を特定してください。その名を刻むことで、かつて葛城が見た風景が、あなたの目の前の景色と重なり合います。</p>"
+        "<p>隅田川に架かる、隅田川三名橋のひとつ『清洲橋』。その優美な女性的フォルムから「震災復興の華」と呼ばれます。建築家・葛城が目指した『水と都市の調和』が、最も純粋な形で具現化された場所と言えるでしょう。</p>",
+        "<p>葛城がこの橋を設計する際、ドイツの古都にあった自碇式吊り橋（ヒンデンブルク橋など）をモデルにしました。萬年橋（まんねんばし）付近から清洲橋を眺める構図は、今も<strong>『◯◯◯の眺め』</strong>と呼ばれ、本場ヨーロッパを彷彿とさせます。葛城のインスピレーションの源となった、そのドイツの<strong>『都市名』</strong>を特定してください。</p>"
       ],
       "answerKeyword": "ケルン",
       "successMessage": "……水面が揺れ、道が繋がった。",
@@ -128,17 +132,17 @@
         "label": "地図で現在地を確認"
       },
       "nextChapterId": "5",
-      "postSolveHTML": "<div style=\"margin-top: 30px; font-size: 0.85rem; border: 1px solid var(--border); padding: 20px; border-radius: 4px; background: rgba(0,0,0,0.02); line-height:2;\"><strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【史実アーカイブ】</strong>モデルとなったのは『ケルン』市にかつてあった大吊り橋です。<br><hr style=\"border:none; border-top:1px dashed var(--border); margin:15px 0;\"><strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【次なる地点への導き】</strong>清洲橋の青い姿を背に、最後は『水天宮』へと足を戻しましょう。この思索の旅の終着点は、命と水が交差する聖域です。<br><a href=\"https://www.google.com/maps/search/?api=1&query=水天宮\" target=\"_blank\" style=\"color:#3e3124; text-decoration:underline;\">地図で確認する</a></div>"
+      "postSolveHTML": "\n<div style=\"margin-top: 30px; font-size: 0.85rem; border: 1px solid var(--border); padding: 20px; border-radius: 4px; background: rgba(0,0,0,0.02); line-height:2;\">\n    <strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【史実アーカイブ】</strong>\n    答えは<strong>『ケルン』</strong>。当時の最新技術を駆使して再現された清洲橋は、その美しさだけでなく、関東大震災のような強い揺れにも耐えられるよう、極めて強固な自碇式という構造が採用されました。\n    <hr style=\"border:none; border-top:1px dashed var(--border); margin:15px 0;\">\n    <strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【最後なる地点への導き：水天宮へ】</strong>\n    川の風を背に浴びながら、再び人形町駅の方面へと戻りましょう。徒歩10分。\n    この旅の最後を締めくくるのは、都市の命と水を司る場所。その入り口へ向かうことは、葛城の遺した『水都』の源流へと帰ることを意味します。\n    <br><a href=\"https://www.google.com/maps/search/?api=1&query=水天宮\" target=\"_blank\" style=\"color:#3e3124; text-decoration:underline;\">地図で次の地点を確認</a>\n</div>\n"
     },
     {
       "id": "5",
       "type": "final",
       "label": "最終の記録",
       "title": "源流の記憶",
-      "monologue": "「手記の最後を記す。すべての地点を繋ぎ終えたとき、あなたは何が見えているだろうか。私は最期の瞬間にまで、この都市の根底にある水の清らかさを信じていた。命の始まり、そして終わり。水天宮に刻まれた最後の一文字に、私の理想のすべてを込めることにする。」",
+      "monologue": "「手記の最期。すべての座標は繋がれた。思えば、私の計画はいつも『水』を巡るものだった。1818年に筑後久留米藩の有馬家が江戸の藩邸に久留米の水天宮を勧請した日から、この地は水を司り、命を育む聖域となった。葛城は死の直前、この水天宮の石畳に最後のアルゴリズムを刻んだという。都市は流れ、形を変え、いつか消滅するかもしれない。だが、この水辺を愛しむ心がある限り、真の設計図は何度でも再展開されるはずだ。」",
       "content": [
-        "<p>今回の思索の旅の終着地点、水天宮。ここは人々の『安産』や『安全』を長きにわたり見守り続けてきた場所です。境内にある『子宝いぬ』の周囲にある円盤を、最後にもう一度、静かに観測してください。</p>",
-        "<p>円盤の中心、母犬の足元に刻まれた<strong>『最後の一文字』</strong>は何でしょうか。それこそが、葛城が最も守り抜くべきと説いた、この都市の源流を象徴する言葉です。</p>"
+        "<p>ついに最終地点、水天宮に到着しました。江戸時代、有馬家が藩邸の門を開放し、『情け有馬の水天宮』と称えられるほど愛されたこの場所は、今も人々の安産と水の安全を見守っています。建築家・葛城は、都市の機能がどれほど効率化されても、最後に立ち返るべきはこのような『命への祈り』であると考えていました。</p>",
+        "<p>境内にある『子宝いぬ』の周囲にある十干十二支が刻まれた円盤。その中心、犬の足元に刻まれた<strong>『最後の一文字』</strong>は何でしょうか。都市の源、そして葛城が最も守りたかった『幻の水都』を象徴するその一文字を刻み、彼の遺録を完結させてください。</p>"
       ],
       "answerKeyword": "水",
       "failureMessage": "……文字が弾かれた。それは最も身近なものだ。",
@@ -170,7 +174,7 @@
         "footer": "—— 全ての記録の観測を満了。手記を閉じる。",
         "returnPortalLabel": "ポータルに戻る"
       },
-      "postSolveHTML": "<div style=\"margin-top: 30px; font-size: 0.85rem; border: 1px solid var(--border); padding: 20px; border-radius: 4px; background: rgba(0,0,0,0.02); line-height:2;\"><strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【史実アーカイブ】</strong>答えは『水』。水天宮はその名の通り水と深く関わる歴史を持っています。</div>",
+      "postSolveHTML": "\n<div style=\"margin-top: 30px; font-size: 0.85rem; border: 1px solid var(--border); padding: 20px; border-radius: 4px; background: rgba(0,0,0,0.02); line-height:2;\">\n    <strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【史実アーカイブ】</strong>\n    最後の答えは<strong>『水』</strong>。水天宮はその名の通り「水」の神様を祀り、江戸・東京という低湿地帯に築かれた都市において、常に人々を癒やし、守り続けてきました。これですべての「記憶の復元」が完了しました。\n</div>\n",
       "imageUrl": "contents/tokyo-rediscovery/assets/suitengu_dog.png",
       "imageCaption": "建築家の旅の終点、命と水が重なり合う瞬間"
     }
