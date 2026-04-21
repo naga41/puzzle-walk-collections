@@ -60,14 +60,14 @@ class PuzzleWalkEngine {
 
         // Prologue Image support
         if (prologueImage) {
-            this.bootScreen.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${prologueImage}')`;
+            this.bootScreen.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('${prologueImage}')`;
             this.bootScreen.style.backgroundSize = 'cover';
             this.bootScreen.style.backgroundPosition = 'center';
         }
 
         // Tap guide
         const guide = document.createElement('div');
-        guide.style.cssText = 'position:absolute; bottom:40px; left:0; width:100%; text-align:center; color:var(--accent); font-size:0.6rem; letter-spacing:4px; opacity:0; transition:opacity 1s; font-family:sans-serif;';
+        guide.style.cssText = 'position:absolute; bottom:40px; left:0; width:100%; text-align:center; color:#f5f0e6; font-size:0.6rem; letter-spacing:4px; opacity:0; transition:opacity 1s; font-family:sans-serif; text-shadow: 0 0 10px rgba(0,0,0,1);';
         guide.innerText = 'TAP TO CONTINUE';
         this.bootScreen.appendChild(guide);
         setTimeout(() => guide.style.opacity = '0.4', 3000);
@@ -147,7 +147,16 @@ class PuzzleWalkEngine {
             }
 
             if (ch.postSolveHTML) {
-                html += `<div id="postsolve${ch.id}" class="postsolve-wrap" style="display:none; opacity:0; transition: opacity 1s ease; margin-bottom: 20px;">${ch.postSolveHTML}</div>`;
+                let displayHTML = ch.postSolveHTML;
+                // 到着ボタンを自動挿入（challenge章）
+                if (ch.type === 'challenge' && ch.nextChapterId) {
+                    displayHTML += `<button class="btn btn-arrival" onclick="engine.handleArrival('${ch.nextChapterId}', '${ch.id}')">次なる観測地点に到着した</button>`;
+                }
+                // 結びボタンを自動挿入（final章）
+                if (ch.type === 'final') {
+                    displayHTML += `<button class="btn btn-arrival" onclick="engine.triggerFinalAha()">記憶の復元を完了し、結びを聞く</button>`;
+                }
+                html += `<div id="postsolve${ch.id}" class="postsolve-wrap" style="display:none; opacity:0; transition: opacity 1s ease; margin-top: 30px;">${displayHTML}</div>`;
             }
 
             // Input and Action Button
@@ -180,19 +189,30 @@ class PuzzleWalkEngine {
         });
     }
 
-    unlockChapter(chapterId) {
+    unlockChapter(chapterId, scroll = true) {
         if (this.isDemoMode) return;
         if (!chapterId) return;
         const target = document.getElementById(`ch${chapterId}`);
         if(target) {
             target.classList.remove('locked');
-            // フィードバックを読む時間を確保するため、遅延を延長
-            setTimeout(() => {
-                const yOffset = -80; // 上部に余白を残す
-                const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                window.scrollTo({ top: y, behavior: 'smooth' });
-            }, 1800);
+            if (scroll) {
+                setTimeout(() => {
+                    const yOffset = -80;
+                    const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }, 400);
+            }
         }
+    }
+
+    handleArrival(nextChapterId, currentChapterId) {
+        const arrivalBtn = document.querySelector(`#postsolve${currentChapterId} .btn-arrival`);
+        if (arrivalBtn) {
+            arrivalBtn.disabled = true;
+            arrivalBtn.innerText = "観測点に到達";
+            arrivalBtn.style.opacity = "0.5";
+        }
+        this.unlockChapter(nextChapterId);
     }
 
     showFeedback(chapterId, msg, isSuccess) {
@@ -218,21 +238,22 @@ class PuzzleWalkEngine {
             this.showFeedback(chapterId, successMsg, true);
             
             const postSolveDiv = document.getElementById(`postsolve${chapterId}`);
-            let waitTime = 1500;
             
             if (postSolveDiv) {
                 postSolveDiv.style.display = 'block';
-                // Trigger reflow for transition
                 void postSolveDiv.offsetWidth;
                 postSolveDiv.style.opacity = '1';
-                // 読ませる時間を作るため待機時間を延長
-                waitTime = 4000;
-            }
-            
-            if (isFinal) {
-                setTimeout(() => this.triggerFinalAha(), waitTime);
-            } else {
-                setTimeout(() => this.unlockChapter(nextChapterId), waitTime);
+
+                // 解けたあとの余韻を邪魔しないよう、入力フォーム等を非表示に
+                const solveUI = document.querySelectorAll(`#ch${chapterId} input, #ch${chapterId} .btn:not(.btn-arrival), #ch${chapterId} .hint, #ch${chapterId} .feedback-msg`);
+                solveUI.forEach(el => el.style.display = 'none');
+
+                // 解説・誘導セクションへスクロール
+                setTimeout(() => {
+                    const yOffset = -120;
+                    const y = postSolveDiv.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }, 1000);
             }
         } else {
             this.showFeedback(chapterId, failMsg, false);
