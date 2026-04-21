@@ -65,12 +65,18 @@ class PuzzleWalkEngine {
         this.bootScreen.appendChild(guide);
         setTimeout(() => guide.style.opacity = '0.4', 3000);
 
-        const waitForNext = () => {
+        const waitForNext = (waitTime) => {
             return new Promise(resolve => {
-                const handler = () => {
+                let resolved = false;
+                const done = () => {
+                    if (resolved) return;
+                    resolved = true;
                     this.bootScreen.removeEventListener('click', handler);
+                    clearTimeout(timer);
                     resolve();
                 };
+                const handler = () => done();
+                const timer = setTimeout(() => done(), waitTime);
                 this.bootScreen.addEventListener('click', handler);
             });
         };
@@ -87,13 +93,9 @@ class PuzzleWalkEngine {
             await sleep(100);
             span.classList.add('show');
             
-            // 最後の一文以外はタップを待つ
-            if (i < prologueLines.length - 1) {
-                await waitForNext();
-            } else {
-                // 最後の一文は余韻のために自動遷移
-                await sleep(Math.max(3000, prologueLines[i].length * 100));
-            }
+            // 文章の長さに応じた自動遷移時間（最低4秒、1文字100ms加算）
+            const autoWaitTime = Math.max(4000, prologueLines[i].length * 100);
+            await waitForNext(autoWaitTime);
             
             span.classList.remove('show');
             await sleep(1000); 
