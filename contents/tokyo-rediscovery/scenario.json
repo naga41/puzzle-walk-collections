@@ -4,11 +4,15 @@
     "id": "tokyo-rediscovery",
     "description": "1923年の建築家・葛城が遺した「水都の設計図」の記憶を辿る",
     "prologue": [
-      "東京には、もう一つの時間が流れている。",
-      "あなたが毎日見ているその景色は、本当に「そこにある」のだろうか。",
-      "1923年。ひとりの建築家が描いた『水都』の幻を——",
-      "——これからあなたに、体験してほしい。",
-      "この街の、本当の輪郭を見るために。"
+      "東京という都市には、公の記録には残らない「もう一つの時間」が流れている。",
+      "あなたが見慣れたアスファルトの無機質な道や、天を衝く均質なビル群。",
+      "その景色は果たして、本当に「そこにある」実体なのだろうか？",
+      "1923年、空前の烈火がこの街を焼き尽くす直前。",
+      "ひとりの若き建築家・葛城（かつらぎ）は、水と人が共生する『水都の設計図』を完成させていた。",
+      "彼の夢は歴史の波に飲まれ、二度と語られることはなかったが……",
+      "彼は街の至る所に、未来へ向けた「記憶のポインタ」を密かに残していた。",
+      "——目を閉じ、足元の水の気配を感じてほしい。",
+      "これからあなたに、この街の「本当の輪郭」を体験してもらう。"
     ]
   },
   "theme": {
@@ -26,9 +30,9 @@
       "label": "記録の断片 00",
       "title": "歴史の観測者への訓示",
       "content": [
-        "<p>我々が今日歩くこのアスファルト。その数メートル下には、1923年の業火で消失したはずの「未完成の未来」が眠っている。</p>",
-        "<p>当時の若き建築家・葛城（かつらぎ）が、震災の直前に完成させたという『水都の設計図』。</p>",
-        "<p>公式記録には残っていないそのデータをデコードし、都市の真の姿をサルベージするのが君たちの任務だ。一見何でもない看板、銅像の指先、橋の袂……それらすべてが、葛城が遺した「歴史のポインタ」である。見失うな。</p>"
+        "<p>我々が日々無意識に歩くこのアスファルト。だが、その数メートル下には、1923年の業火で消え去ったはずの「未完成の未来」が確かに脈打っている。</p>",
+        "<p>関東大震災の直前、一人の建築家・葛城が完成させた幻の『水都の設計図』。彼は知っていた。効率だけを求めて自然をアスファルトで塞げば、都市はいつか呼吸を止めてしまうことを。</p>",
+        "<p>彼は自身の理想が叶わぬことを悟り、街の構造そのものに暗号化された座標（ポインタ）を刻み込んだ。銅像の目線、橋の装飾、古びた看板……。一見何でもない景色に隠された彼の「個人的な祈り」をデコードし、都市の真の姿をサルベージしてほしい。</p>"
       ],
       "actionLabel": "手記を開く",
       "nextChapterId": "1"
@@ -38,12 +42,11 @@
       "type": "challenge",
       "label": "記録の断片 01",
       "title": "漂流者の遺した座標",
-      "monologue": "「1600年、一艘のボロボロの船がこの地に流れ着いた。それがこの街の『外部インターフェース』の始まりだ。八重洲という名は、漂流した男がこの地に帰化した証。都市のOSは、異物の混入によってアップデートを開始した。」",
+      "monologue": "「1600年、一艘のボロボロの船がこの地に流れ着いた。それがこの国の『外部インターフェース』の始まりだ。八重洲という名は、海を越えてきた男がこの地に残した楔。都市のOSは、異物の混入によってアップデートを開始した。水路は血となり、異国の知恵がこの土地の脈を打ち始めたのだ。」",
       "imageUrl": "contents/tokyo-rediscovery/assets/ship.png",
       "imageCaption": "——葛城の手記に挟まれていた古いスケッチ",
       "content": [
-        "<p>東京駅八重洲口。かつての江戸城「外堀」が流れていた水の境界線だ。</p><p>この地の名の由来となった男、ヤン・ヨーステンが漂着した船「リーフデ号」。しかし、その船には日本へ来る前の**「以前の名前」**が存在した。葛城が「起点のキー」として設定したその名を特定せよ。</p>",
-        "<div style=\"margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed rgba(90, 70, 50, 0.3); padding-top: 15px;\"><span style=\"color: #736050;\">【史実アーカイブ】</span> <a href=\"https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%BC%E3%83%95%E3%83%87%E5%8F%B7\" target=\"_blank\" style=\"color: #736050;\">リーフデ号（エラスムス号）の漂着と八重洲の由来</a></div>"
+        "<p>東京駅周辺に広がる「八重洲（やえす）」という地名。かつてここは、江戸城の広大な「外堀」がとうとうと流れていた水の境界線だった。</p><p>この地の名の由来となった航海士、ヤン・ヨーステン。彼が乗って漂着した運命の船「リーフデ号」には、日本へ来る前の<strong>「以前の名前」</strong>が存在したという。葛城が『水都』の起点のキーとして設定したその名を特定せよ。</p>"
       ],
       "answerKeyword": "エラスムス",
       "successMessage": "……風景の解像度が、少し上がった。",
@@ -54,19 +57,19 @@
         "label": "地図で現在地を確認"
       },
       "hint": "リーフデ(Liefde)はオランダ語で「愛」。以前はオランダの学者の名で呼ばれていた。「エ〇〇ムス」。八重洲通りの記念碑か、地下街にある像をスキャンせよ。",
-      "nextChapterId": "2"
+      "nextChapterId": "2",
+      "postSolveHTML": "<div style=\"margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed rgba(90, 70, 50, 0.3); padding-top: 15px;\"><span style=\"color: #736050;\">【史実アーカイブ】</span> <br>八重洲の地名は、オランダ人ヤン・ヨーステン（和名: 耶楊子）の屋敷があったことに由来する。彼が乗っていた船「リーフデ号」は出航当初、オランダの人文学者の名にちなんで<strong>「エラスムス号」</strong>と呼ばれており、船尾には現在も残るエラスムス像が飾られていた。<br><a href=\"https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%BC%E3%83%95%E3%83%87%E5%8F%B7\" target=\"_blank\" style=\"color: #736050; text-decoration:underline;\">詳細を読む (Wikipedia)</a></div>"
     },
     {
       "id": "2",
       "type": "challenge",
       "label": "記録の断片 02",
       "title": "守護獣のプロトコル",
-      "monologue": "「日本橋。五街道の起点。ここが焼ければ、国が止まる。1923年の業火の中、人々は橋を必死に守った。葛城は、再建のマスター・アルゴリズムを、この橋の中央で不変の時を刻む『翼を持つ獣』の足元に封印したという。」",
+      "monologue": "「日本橋。五街道の起点であり、物資と人が交わる都市の心室。1923年の業火の際、猛火の中で人々はこの橋を必死に守り抜いた。葛城は、どんなに外見が変わろうとも再生のマスター・アルゴリズムが保たれるよう、橋の中央で不変の時を刻む『翼を持つ獣』の足元に希望を封印した。」",
       "imageUrl": "contents/tokyo-rediscovery/assets/kirin.png",
       "imageCaption": "——1923年当時のフィルム写真",
       "content": [
-        "<p>日本橋の中央。そこには日本の道路の起点を示す「道路元標」がある。その傍らで、未来を見据えるように立つ「麒麟像」を観測せよ。</p><p>麒麟は、ある「紋章」が刻まれた盾をその手で押さえている。その紋章には何が描かれているか？</p>",
-        "<div style=\"margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed rgba(90, 70, 50, 0.3); padding-top: 15px;\"><span style=\"color: #736050;\">【史実アーカイブ】</span> <a href=\"https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E6%A9%8B_(%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E3%81%AE%E6%A9%8B)\" target=\"_blank\" style=\"color: #736050;\">日本橋の装飾彫刻と麒麟像に込められた「繁栄」の願い</a></div>"
+        "<p>日本橋の中央。そこには日本のすべてを繋ぐ起点「日本国道路元標」が埋め込まれている。その傍らで、空を見据え、どこかへ飛び立とうとしているかのように立つ「麒麟像」を見上げてほしい。</p><p>麒麟は、ある「紋章」が刻まれた盾をその手で固く押さえている。この地がいまどこに属しているかを示すその紋章。それは一体何か？</p>"
       ],
       "answerKeyword": "東京都",
       "successMessage": "……風景の解像度が、少し上がった。",
@@ -77,17 +80,17 @@
         "label": "地図で現在地を確認"
       },
       "hint": "像の台座、あるいは盾を詳しく見よ。「東京都」の紋章、あるいはそれを構成する植物の意匠が隠されている。",
-      "nextChapterId": "3"
+      "nextChapterId": "3",
+      "postSolveHTML": "<div style=\"margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed rgba(90, 70, 50, 0.3); padding-top: 15px;\"><span style=\"color: #736050;\">【史実アーカイブ】</span> <br>日本橋の麒麟像は、日本の道路の起点から「全国へ力強く飛び立つ」ことを暗喩して作られた。西洋のドラゴンや東洋の伝説が融合したデザインで、手には現在の<strong>「東京都」</strong>の紋章（当時の東京市の紋しるべ）を抱えている。震災にも戦火にも耐えたこの像は、今も再生の象徴である。<br><a href=\"https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E6%A9%8B_(%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E3%81%AE%E6%A9%8B)\" target=\"_blank\" style=\"color: #736050; text-decoration:underline;\">詳細を読む (Wikipedia)</a></div>"
     },
     {
       "id": "3",
       "type": "challenge",
       "label": "記録の断片 03",
       "title": "同期する街の鼓動",
-      "monologue": "「近代的なビル群に囲まれても、この街の『揺らぎ』は消えない。人形町。ここには江戸から続く同期信号（クロック）が流れている。葛城は、効率だけを求めて壊される都市を危惧し、人々の営みのリズムを設計図に組み込んだ。」",
+      "monologue": "「無機質なビル群に囲まれても、この街の『揺らぎ』は完全には消えない。人形町。ここには江戸の昔から続く同期信号（クロック）が流れている。葛城は、ただ効率だけを求めてスクラップ＆ビルドを繰り返す都市を危惧し、あえて人々の営みの土着的なリズムを設計図に組み込んだのだ。」",
       "content": [
-        "<p>人形町通りの両側にそびえる2つの「からくり櫓」。これは単なる時計台ではない。街の歴史を同期させるための発信器だ。</p><p>特に「町火消」を模した櫓を観測せよ。櫓の幕や看板に記された、江戸の街を火災から守り続けた者たちの「総称」を導き出せ。</p>",
-        "<div style=\"margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed rgba(90, 70, 50, 0.3); padding-top: 15px;\"><span style=\"color: #736050;\">【史実アーカイブ】</span> <a href=\"https://ja.wikipedia.org/wiki/%E7%94%BA%E7%81%AB%E6%B6%88\" target=\"_blank\" style=\"color: #736050;\">江戸の町火消といろは四十八組の歴史</a></div>"
+        "<p>人形町通りの両側にそびえ立つ、2つの「からくり櫓」。これらは単なる観光用の時計台ではない。街の歴史を現代の我々に同期させるための物理的な発信器だ。</p><p>その中のひとつ、「町火消（まちびけし）」を模した櫓の前に立ち、観測せよ。櫓の幕や看板に記されている、江戸の街を恐ろしい火炎から命懸けで守り続けた勇敢な者たちの「総称」を導き出せ。</p>"
       ],
       "answerKeyword": "火消し",
       "successMessage": "……彼らの営みが、微かに聞こえた。",
@@ -97,19 +100,19 @@
         "url": "https://www.google.com/maps/search/?api=1&query=人形町+からくり櫓",
         "label": "地図で現在地を確認"
       },
-      "nextChapterId": "4"
+      "nextChapterId": "4",
+      "postSolveHTML": "<div style=\"margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed rgba(90, 70, 50, 0.3); padding-top: 15px;\"><span style=\"color: #736050;\">【史実アーカイブ】</span> <br>木造密集都市であった江戸において、火災は最大の脅威だった。町人たちによる<strong>「火消し」</strong>（いろは四十八組）は、命懸けで延焼を防ぐために建物を壊す「破壊消防」を行い、街を守り続けた。この櫓は、彼らの営みと祭りの活気を今に伝えている。<br><a href=\"https://ja.wikipedia.org/wiki/%E7%94%BA%E7%81%AB%E6%B6%88\" target=\"_blank\" style=\"color: #736050; text-decoration:underline;\">詳細を読む (Wikipedia)</a></div>"
     },
     {
       "id": "4",
       "type": "challenge",
       "label": "記録の断片 04",
       "title": "流動するインターフェース",
-      "monologue": "「水こそが、この街の真の血管だ。葛城はライン川の畔、ドイツのケルンで見た美しい吊り橋の夢を見た。彼はそれを、震災後の隅田川に再現しようとした。それは単なる橋ではない。世界と接続するための物理ポートだ。」",
+      "monologue": "「水こそが、この街を動かす真の血管だ。葛城はライン川の畔、ドイツの地で見た美しい吊り橋の夢に取り憑かれた。彼はそれを、震災で崩壊した隅田川の新たな顔として再現しようとした。それは単に川を渡るための道ではない。失意の都市を世界と、そして未来と接続するための輝かしいポートだった。」",
       "imageUrl": "contents/tokyo-rediscovery/assets/bridge.png",
       "imageCaption": "——葛城が書き残した『世界一美しい吊り橋』の青写真",
       "content": [
-        "<p>甘酒横丁の路地を抜け、隅田川のテラスへ出よ。目の前に現れる青い吊り橋「清洲橋」をスキャンせよ。</p><p>葛城が「世界一美しい」と称賛し、東京の再建モデルとしたドイツの**「都市名」**を入力せよ。</p>",
-        "<div style=\"margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed rgba(90, 70, 50, 0.3); padding-top: 15px;\"><span style=\"color: #736050;\">【史実アーカイブ】</span> <a href=\"https://ja.wikipedia.org/wiki/%E6%B8%85%E6%B4%B2%E6%A9%8B\" target=\"_blank\" style=\"color: #736050;\">震災復興の華・清洲橋とケルンの吊り橋モデル</a></div>"
+        "<p>甘酒横丁の賑わいから路地を抜け、隅田川の開けたテラスへ出よ。目の前に現れる、水面に優美なシルエットを落とす青い吊り橋「清洲橋（きよすばし）」をスキャンせよ。</p><p>葛城が「世界一美しい」と称賛し、復興しゆく東京の希望の象徴、その設計モデルとした海外の<strong>「ある都市名」</strong>を入力せよ。</p>"
       ],
       "answerKeyword": "ケルン",
       "successMessage": "……水面が揺れ、道が繋がった。",
@@ -119,17 +122,17 @@
         "url": "https://www.google.com/maps/search/?api=1&query=清洲橋",
         "label": "地図で現在地を確認"
       },
-      "nextChapterId": "5"
+      "nextChapterId": "5",
+      "postSolveHTML": "<div style=\"margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed rgba(90, 70, 50, 0.3); padding-top: 15px;\"><span style=\"color: #736050;\">【史実アーカイブ】</span> <br>関東大震災の復興事業の華として架けられた「清洲橋」。当時の技術者たちは、ドイツの<strong>ケルン</strong>市にあった大吊り橋の優美な女性的フォルムをモデルにし、「震災復興の象徴」としてこの美しい橋を造り上げた。<br><a href=\"https://ja.wikipedia.org/wiki/%E6%B8%85%E6%B4%B2%E6%A9%8B\" target=\"_blank\" style=\"color: #736050; text-decoration:underline;\">詳細を読む (Wikipedia)</a></div>"
     },
     {
       "id": "5",
       "type": "final",
       "label": "最終の記録",
       "title": "水の記憶",
-      "monologue": "「設計図は完成した。だが、それは私の手元にはない。未来の観測者がすべての座標を繋ぎ、最後の祈りを捧げたとき、真の東京が展開されるだろう。最後に立ち返るべきは、我々の命の源流だ。」",
+      "monologue": "「私の思い描いた水都の設計図は完成した。だが、それが陽の目を見ることはないかもしれない。それでも構わない。未来の観測者がこれらの座標を順番に辿り、都市の深層で最後の祈りを捧げたとき、真の東京が彼らの網膜に展開されるだろう。最後に立ち返るべきは、我々の命の源流だ。」",
       "content": [
-        "<p>最終座標、水天宮。ここは幾度もの破壊と再生を繰り返しながら、街の記憶をアーカイブし続けてきた。境内の「子宝いぬ」の周りを囲む十二支の円盤を観測せよ。</p><p>円盤の中心に刻まれた「最後の一文字」を入力せよ。それが、葛城が最も守りたかった『水都』の象徴だ。</p>",
-        "<div style=\"margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed rgba(90, 70, 50, 0.3); padding-top: 15px;\"><span style=\"color: #736050;\">【史実アーカイブ】</span> <a href=\"https://ja.wikipedia.org/wiki/%E6%B0%B4%E5%A4%A9%E5%AE%AE_(%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA)\" target=\"_blank\" style=\"color: #736050;\">有馬頼徳による水天宮の勧請と歴史</a></div>"
+        "<p>最終座標、水天宮。ここは幾度もの火災や戦禍、移転による破壊と再生を繰り返しながら、人々が命の誕生と安全を祈り続けてきた特別なアーカイブだ。境内に置かれた「子宝いぬ」の周りを囲む、十二支の円盤を観測せよ。</p><p>円盤の中心、犬の足元に刻まれた「最後の一文字」を入力せよ。それこそが、葛城が最も愛し、そして守りたかった『幻の都市』の象徴だ。</p>"
       ],
       "answerKeyword": "水",
       "failureMessage": "……文字が弾かれた。それは最も身近なものだ。",
@@ -143,24 +146,25 @@
         "title": "記憶の復元",
         "imageUrl": "contents/tokyo-rediscovery/assets/map_overlay.png",
         "content": [
-            "<p>君たちが今日、アスファルトを踏みしめて歩いた軌跡。</p>",
-            "<p>その座標を、葛城が遺した「100年前の海図」に重ね合わせた。</p>",
-            "<p class=\"reveal-text\">そこには、道など存在しない。すべては「海」だった。</p>",
-            "<p>八重洲はかつて波打つ海岸線であり、日本橋は入り江に突き出した象徴。そして人形町の路地は、湿地を埋め立てて作られた仮初の土地。</p>",
-            "<p>葛城が設計図に込めた真実……それは、<strong>「この街は今も、海の上に浮いている一時の記憶に過ぎない」</strong>という事実だ。</p>",
-            "<p>水は形を変え、地下へ潜り、君たちの足元を今も静かに流れ続けている。</p>",
-            "<p>今すぐ顔を上げて街を見てほしい。君たちの目には、もう「ただのビル街」は見えていないはずだ。</p>",
-            "<div style=\"margin-top: 40px; padding: 20px; background: rgba(0,0,0,0.2); border-left: 2px solid #7dd3fc; font-size: 0.85rem;\">",
-            "<p style=\"margin-top: 0; color: #bae6fd;\">【史実アーカイブ・リファレンス】</p>",
-            "<ul style=\"padding-left: 20px; color: #cbd5e1; line-height: 1.8;\">",
-            "<li style=\"margin-bottom: 10px;\"><strong>日比谷入江と八重洲の海岸線:</strong> 徳川家康が江戸に入った1590年頃、現在の東京駅周辺（八重洲〜丸の内）まで「日比谷入江」と呼ばれる海が広がり、波が打ち寄せていました。 <a href=\"https://ja.wikipedia.org/wiki/%E6%97%A5%E6%AF%94%E8%B0%B7%E5%85%A5%E6%B1%9F\" target=\"_blank\" style=\"color: #7dd3fc; text-decoration: underline;\">[Wikipedia]</a></li>",
-            "<li style=\"margin-bottom: 10px;\"><strong>江戸の埋め立てと湿地:</strong> 現在の日本橋〜人形町エリアも、もとは海沿いの湿原や芦原（あしはら）であり、天下普請と呼ばれる大規模な人工の埋め立てによって土台が作られた歴史があります。 <a href=\"https://ja.wikipedia.org/wiki/%E6%B1%9F%E6%88%B8#%E5%A4%A9%E4%B8%8B%E6%99%AE%E8%AB%8B\" target=\"_blank\" style=\"color: #7dd3fc; text-decoration: underline;\">[Wikipedia]</a></li>",
-            "</ul>",
-            "</div>"
+          "<p>君たちが今日、アスファルトを踏みしめて歩いた軌跡。</p>",
+          "<p>その座標を、葛城が遺した「100年前の海図」に重ね合わせた。</p>",
+          "<p class=\"reveal-text\">そこには、道など存在しない。すべては「海」だった。</p>",
+          "<p>八重洲はかつて波打つ海岸線であり、日本橋は入り江に突き出した象徴。そして人形町の路地は、湿地を埋め立てて作られた仮初の土地。</p>",
+          "<p>葛城が設計図に込めた真実……それは、<strong>「この街は今も、海の上に浮いている一時の記憶に過ぎない」</strong>という事実だ。</p>",
+          "<p>水は形を変え、地下へ潜り、君たちの足元を今も静かに流れ続けている。</p>",
+          "<p>今すぐ顔を上げて街を見てほしい。君たちの目には、もう「ただのビル街」は見えていないはずだ。</p>",
+          "<div style=\"margin-top: 40px; padding: 20px; background: rgba(0,0,0,0.2); border-left: 2px solid #7dd3fc; font-size: 0.85rem;\">",
+          "<p style=\"margin-top: 0; color: #bae6fd;\">【史実アーカイブ・リファレンス】</p>",
+          "<ul style=\"padding-left: 20px; color: #cbd5e1; line-height: 1.8;\">",
+          "<li style=\"margin-bottom: 10px;\"><strong>日比谷入江と八重洲の海岸線:</strong> 徳川家康が江戸に入った1590年頃、現在の東京駅周辺（八重洲〜丸の内）まで「日比谷入江」と呼ばれる海が広がり、波が打ち寄せていました。 <a href=\"https://ja.wikipedia.org/wiki/%E6%97%A5%E6%AF%94%E8%B0%B7%E5%85%A5%E6%B1%9F\" target=\"_blank\" style=\"color: #7dd3fc; text-decoration: underline;\">[Wikipedia]</a></li>",
+          "<li style=\"margin-bottom: 10px;\"><strong>江戸の埋め立てと湿地:</strong> 現在の日本橋〜人形町エリアも、もとは海沿いの湿原や芦原（あしはら）であり、天下普請と呼ばれる大規模な人工の埋め立てによって土台が作られた歴史があります。 <a href=\"https://ja.wikipedia.org/wiki/%E6%B1%9F%E6%88%B8#%E5%A4%A9%E4%B8%8B%E6%99%AE%E8%AB%8B\" target=\"_blank\" style=\"color: #7dd3fc; text-decoration: underline;\">[Wikipedia]</a></li>",
+          "</ul>",
+          "</div>"
         ],
         "footer": "—— 全ての記録の観測を満了。手記を閉じる。",
         "returnPortalLabel": "ポータルに戻る"
-      }
+      },
+      "postSolveHTML": "<div style=\"margin-top: 30px; font-size: 0.8rem; border-top: 1px dashed rgba(90, 70, 50, 0.3); padding-top: 15px;\"><span style=\"color: #736050;\">【史実アーカイブ】</span> <br>江戸時代より安産や水難除けの神として信仰を集める水天宮。その名の通り<strong>「水」</strong>とその源流に深く結びついた神仏が祀られている。東京という街が常に水と共に発展し、時に脅威によって形を変えてきた歴史を静かに見守り続けている。<br><a href=\"https://ja.wikipedia.org/wiki/%E6%B0%B4%E5%A4%A9%E5%AE%AE_(%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA)\" target=\"_blank\" style=\"color: #736050; text-decoration:underline;\">詳細を読む (Wikipedia)</a></div>"
     }
   ]
 }

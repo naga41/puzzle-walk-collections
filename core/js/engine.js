@@ -119,6 +119,10 @@ class PuzzleWalkEngine {
                 html += `<div class="html-content">${ch.content.join('')}</div>`;
             }
 
+            if (ch.postSolveHTML) {
+                html += `<div id="postsolve${ch.id}" class="postsolve-wrap" style="display:none; opacity:0; transition: opacity 1s ease; margin-bottom: 20px;">${ch.postSolveHTML}</div>`;
+            }
+
             // Input and Action Button
             if (ch.type === 'challenge' || ch.type === 'final') {
                 html += `<input type="text" id="ans${ch.id}" placeholder="キーワードを入力">`;
@@ -182,10 +186,23 @@ class PuzzleWalkEngine {
         if (val.includes(correctKeyword)) {
             inputElement.disabled = true;
             this.showFeedback(chapterId, successMsg, true);
+            
+            const postSolveDiv = document.getElementById(`postsolve${chapterId}`);
+            let waitTime = 1500;
+            
+            if (postSolveDiv) {
+                postSolveDiv.style.display = 'block';
+                // Trigger reflow for transition
+                void postSolveDiv.offsetWidth;
+                postSolveDiv.style.opacity = '1';
+                // 読ませる時間を作るため待機時間を延長
+                waitTime = 4000;
+            }
+            
             if (isFinal) {
-                setTimeout(() => this.triggerFinalAha(), 1500);
+                setTimeout(() => this.triggerFinalAha(), waitTime);
             } else {
-                setTimeout(() => this.unlockChapter(nextChapterId), 1500);
+                setTimeout(() => this.unlockChapter(nextChapterId), waitTime);
             }
         } else {
             this.showFeedback(chapterId, failMsg, false);
