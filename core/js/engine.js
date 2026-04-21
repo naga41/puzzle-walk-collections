@@ -31,7 +31,7 @@ class PuzzleWalkEngine {
             this.applyTheme(this.scenarioData.theme);
             this.headerTitle.innerText = this.scenarioData.metadata.title;
             this.renderScenario(this.scenarioData.chapters);
-            this.playPoeticPrologue(this.scenarioData.metadata.prologue);
+            this.playPoeticPrologue(this.scenarioData.metadata.prologue, this.scenarioData.metadata.prologueImage);
             
         } catch (err) {
             console.error(err);
@@ -51,11 +51,18 @@ class PuzzleWalkEngine {
         }
     }
 
-    async playPoeticPrologue(prologueLines) {
+    async playPoeticPrologue(prologueLines, prologueImage) {
         const logContainer = document.getElementById('boot-log');
         if (!prologueLines || prologueLines.length === 0) {
             this.bootScreen.style.display = 'none';
             return;
+        }
+
+        // Prologue Image support
+        if (prologueImage) {
+            this.bootScreen.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${prologueImage}')`;
+            this.bootScreen.style.backgroundSize = 'cover';
+            this.bootScreen.style.backgroundPosition = 'center';
         }
 
         // Tap guide
@@ -174,14 +181,17 @@ class PuzzleWalkEngine {
     }
 
     unlockChapter(chapterId) {
-        if (this.isDemoMode) return; // デモモード時は関数レベルで強制ブロック
+        if (this.isDemoMode) return;
         if (!chapterId) return;
         const target = document.getElementById(`ch${chapterId}`);
         if(target) {
             target.classList.remove('locked');
+            // フィードバックを読む時間を確保するため、遅延を延長
             setTimeout(() => {
-                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 300);
+                const yOffset = -80; // 上部に余白を残す
+                const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }, 1800);
         }
     }
 
