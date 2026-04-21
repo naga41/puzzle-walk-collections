@@ -78,8 +78,7 @@ body {
     transform: translateY(10px);
     text-align: justify;
     text-justify: inter-character;
-    color: #f5f0e6; /* 背景画像の上でも映える明るい色へ固定 */
-    text-shadow: 0 2px 15px rgba(0,0,0,0.8), 0 0 5px rgba(0,0,0,0.5); /* 文字の視認性を確保 */
+    color: var(--text-main); /* 背景を明るい色に戻したため、文字を濃色へ */
 }
 
 .prologue-text.show {

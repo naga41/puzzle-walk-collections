@@ -35,14 +35,15 @@
       "imageCaption": "1923年、震災の猛火の中で消失したはずの、葛城が描いた『水都』の青写真。",
       "successMessage": "ようこそ、記憶のアーカイブへ。面白い話になりますよ。",
       "postSolveHTML": "<div style=\"margin-top: 30px; font-size: 0.85rem; border: 1px solid var(--border); padding: 20px; border-radius: 4px; background: rgba(0,0,0,0.02); line-height:2;\"><strong style=\"color: var(--accent); display:block; margin-bottom:10px;\">【次なる地点への導き】</strong>東京駅・八重洲口方面へ向かってください。まずは都市の玄関口、かつての水の境界線へと足を運びましょう。<br><a href=\"https://www.google.com/maps/search/?api=1&query=東京駅+八重洲中央口\" target=\"_blank\" style=\"color:#3e3124; text-decoration:underline;\">地図で確認する</a></div>",
-      "instruction": "東京駅 八重洲中央口（地上出口）へ向かい、旅の準備を整えよ。"
+      "instruction": "東京駅 八重洲中央口（地上出口）へ向かい、旅の準備を整えよ。",
+      "monologue": "「100年前の記憶を呼び覚まそう。私の設計した未来は、まだこの地下に、たしかに息づいている。」"
     },
     {
       "id": "1",
       "type": "challenge",
       "label": "記録の断片 01",
       "title": "漂流者の噺",
-      "monologue": "「えー、八重洲でございます。今でこそビルがニョキニョキ立ち並んでますがね、家康さんの頃はここぁ全部『海』だった。波がザブンザブンと。そこへ一艘のボロ船が流れ着いた。乗ってたのはヤン・ヨーステン……なんてぇ、舌を噛みそうな名前のオランダ人だ。彼がこの辺りに屋敷をもらったから『八重洲（やえす）』。面白いのが、明治の整理で地名だけが駅の反対側にピョコっと飛び出しちまった。地名ってなぁ、案外落ち着きのないもんでございますな。さて、その漂流船の正体、探ってみようじゃありませんか。」",
+      "monologue": "「八重洲……。かつての水の境界線。この喧騒の下に眠る、一艘の漂流船の記憶を探ってほしい。」",
       "imageUrl": "contents/tokyo-rediscovery/assets/ship.png",
       "imageCaption": "——葛城の手記に挟まれていた古いスケッチ",
       "content": [
@@ -67,7 +68,7 @@
       "type": "challenge",
       "label": "記録の断片 02",
       "title": "日本橋、お江戸の心臓",
-      "monologue": "「話しちゃぁなんですが、日本橋ってぇのはお江戸のヘソ、五街道の起点でございます。1923年の火事のときも、橋の欄干にゃ煤がべったり。でもね、建築界の親分・妻木頼黄ってぇ人が、西洋のバロックと日本の腕をガチャンと繋げて、とんでもねぇ芸術品にしちまった。麒麟（きりん）さんには翼がある。日本の中心から世界へ羽ばたこうってぇ寸法だ。その麒麟さんが抱え込んでる盾の紋章……それを見落としちゃぁ、お江戸の粋が廃りますよ。」",
+      "monologue": "「日本橋。ここは都市の意志が凝縮された場所だ。震災の業火さえも、この石と青銅の誇りを焼き払うことはできなかった。」",
       "imageUrl": "contents/tokyo-rediscovery/assets/kirin.png",
       "imageCaption": "——1923年当時のフィルム写真",
       "content": [
@@ -92,7 +93,7 @@
       "type": "challenge",
       "label": "記録の断片 03",
       "title": "人形町、火消しの心意気",
-      "monologue": "「えー、人形町。ここはねぇ、情緒が服を着て歩いてるような街でして。昔は吉原遊郭があり、芝居小屋が並び、傀儡師（人形使い）が闊歩してた。葛城の野郎、日記にこう書いてやがる。『ただ立派なビルを作ってもダメだ。そこに住む人の祭りや熱気、そのリズムを街に同期させろ』ってね。からくり櫓が刻んでいるのは時間じゃねぇ。江戸から続く、粋な火消したちの誇りですよ。幕に書かれたその名を、胸に刻んでやっとくれ。」",
+      "monologue": "「人形町。この街の細い路地には、江戸から続く人々の熱気が堆積している。火を恐れず、火と共に生きた男たちの矜持を見せてやろう。」",
       "content": [
         "<div class=\"chat-container\"><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">人形町……。ここは江戸の熱気が未だに地面の下で脈動している稀有な場所だ。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">二つのからくり櫓が、街の時間を見守っていますね。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">私は設計図にこう記した。『人の祭りや熱気のリズムがなければ、街はただの抜け殻だ』。特に、火に立ち向かった者たちの誇りを忘れてはならない。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">櫓の幕に書かれた名前……。彼らがこの街の不屈の魂の正体なんですね。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">その通りだ。伝統的な火消しの呼称を特定してほしい。</div></div></div>",
         "<div style=\"margin: 20px -20px; text-align:center;\"><img src=\"artifacts/edo_hikeshi_matoi_dramatic_1776780264280.png\" style=\"width:100%; box-shadow: 0 4px 20px rgba(0,0,0,0.2);\"><p style=\"font-size:0.8rem; color:var(--accent); margin-top:10px;\">不屈の精神を象徴する、江戸町火消の纒（まとい）のイメージ</p></div>"
@@ -116,7 +117,7 @@
       "type": "challenge",
       "label": "記録の断片 04",
       "title": "清洲橋、隅田の華",
-      "monologue": "「1923年、隅田川。木の橋が全部燃えちまって、川面は空っぽ。そこへ葛城が、ドイツで見たっていう夢をぶち込んだ。清澄と中洲を繋ぐ『清洲橋』。単に渡るための道具じゃねぇ、鋼鉄を優美に曲げた、水都のレクイエムでございます。通称は『震災復興の華』……どうです、見事なもんじゃありませんか。川風に吹かれながら、彼の見た理想の風景、一緒に眺めてみましょうよ。」",
+      "monologue": "「清洲橋。鋼鉄で描かれた優美な曲線は、私が東京に重ねた幻の影だ。水面に映るその残像を追ってほしい。」",
       "imageUrl": "contents/tokyo-rediscovery/assets/bridge.png",
       "imageCaption": "——葛城が書き残した『世界一美しい吊り橋』の青写真",
       "content": [
@@ -140,7 +141,7 @@
       "type": "final",
       "label": "最終の記録",
       "title": "水天宮、命の源",
-      "monologue": "「えー、おあとがよろしいようで。すべての地点を繋ぎ終え、最後に辿り着いたのは……水天宮。有馬家のお殿様が久留米から連れてきた神様で、『情け有馬の水天宮』なんてぇ言葉まで生まれた。葛城の計画も、最後は『水』に戻ってきたようで。都市がどう変わろうと、命を祝う心と水辺の安らぎだけは、設計図の底に絶対に残しておきたかったんでしょうな。お犬さまの足元に刻まれた、最後の一文字。それを刻んで、この長いお噺を結ぶといたしましょう。」",
+      "monologue": "「水天宮。安らぎと祈りの場所。海に始まり、祈りの水に還る……。この旅も、ようやく最深部へと辿り着いたようだ。」",
       "content": [
         "<div class=\"chat-container\"><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">ついに終着地点、水天宮だ。私の旅も、君の観測も、最後はここに戻り着く。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">有馬家が江戸の人々に開放したという『情け有馬』の水天宮。慈悲の心に満ちた場所ですね。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">どんなに巨大な都市を作ろうと、最後は『命への祈り』がなければ空虚な石積みだ。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">この街の底流には、常に水の力が流れている。海から始まり、祈りの水へと還る。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">あ、境内の『子宝いぬ』の周りに、干支を記した円盤があります。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">その円盤のど真ん中を、心で見てごらん。都市の源であり、葛城が死ぬまで守ろうとした『幻の水都』を象徴する、最後の一文字があるはずだ。</div></div></div>"
       ],
