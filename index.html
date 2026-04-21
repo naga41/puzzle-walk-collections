@@ -131,6 +131,16 @@
             navigator.serviceWorker.register('sw.js');
         });
     }
+
+    // URLのパラメータ（?demo=true等）をカードのリンク先にも引き継ぐ
+    window.addEventListener('DOMContentLoaded', () => {
+        const params = window.location.search;
+        if (params) {
+            document.querySelectorAll('a.scenario-card').forEach(a => {
+                a.href += params.replace('?', '&'); 
+            });
+        }
+    });
 </script>
 
 </body>
