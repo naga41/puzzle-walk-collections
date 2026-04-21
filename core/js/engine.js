@@ -161,8 +161,13 @@ class PuzzleWalkEngine {
 
             // Input and Action Button
             if (ch.type === 'challenge' || ch.type === 'final') {
-                html += `<input type="text" id="ans${ch.id}" placeholder="キーワードを入力">`;
-                html += `<button class="btn" onclick="engine.checkAnswer('${ch.id}', '${ch.answerKeyword}', ${ch.type === 'final'}, '${ch.nextChapterId}', '${ch.successMessage || '成功'}', '${ch.failureMessage || '失敗'}')">${ch.actionLabel}</button>`;
+                html += `
+                <div class="quest-card fade-in">
+                    <div class="quest-label">ARCHIVE QUEST</div>
+                    <div class="quest-instruction">${ch.instruction || 'この場所で『真実の一片』を特定せよ。'}</div>
+                    <input type="text" id="ans${ch.id}" placeholder="キーワードを入力">
+                    <button class="btn" onclick="engine.checkAnswer('${ch.id}', '${ch.answerKeyword}', ${ch.type === 'final'}, '${ch.nextChapterId}', '${ch.successMessage || '成功'}', '${ch.failureMessage || '失敗'}')">${ch.actionLabel}</button>
+                </div>`;
                 html += `<div id="feedback${ch.id}" class="feedback-msg"></div>`;
             } else if (ch.type === 'briefing') {
                 // For briefing, button to unlock next
@@ -245,7 +250,7 @@ class PuzzleWalkEngine {
                 postSolveDiv.style.opacity = '1';
 
                 // 解けたあとの余韻を邪魔しないよう、入力フォーム等を非表示に
-                const solveUI = document.querySelectorAll(`#ch${chapterId} input, #ch${chapterId} .btn:not(.btn-arrival), #ch${chapterId} .hint, #ch${chapterId} .feedback-msg`);
+                const solveUI = document.querySelectorAll(`#ch${chapterId} .quest-card, #ch${chapterId} .hint, #ch${chapterId} .feedback-msg`);
                 solveUI.forEach(el => el.style.display = 'none');
 
                 // 解説・誘導セクションへスクロール
