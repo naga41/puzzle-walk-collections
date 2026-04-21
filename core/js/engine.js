@@ -58,16 +58,9 @@ class PuzzleWalkEngine {
             return;
         }
 
-        // Prologue Image support
-        if (prologueImage) {
-            this.bootScreen.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('${prologueImage}')`;
-            this.bootScreen.style.backgroundSize = 'cover';
-            this.bootScreen.style.backgroundPosition = 'center';
-        }
-
-        // Tap guide
+        // TAP TO CONTINUE guide color adjustment for legibility
         const guide = document.createElement('div');
-        guide.style.cssText = 'position:absolute; bottom:40px; left:0; width:100%; text-align:center; color:#f5f0e6; font-size:0.6rem; letter-spacing:4px; opacity:0; transition:opacity 1s; font-family:sans-serif; text-shadow: 0 0 10px rgba(0,0,0,1);';
+        guide.style.cssText = 'position:absolute; bottom:40px; left:0; width:100%; text-align:center; color:var(--accent); font-size:0.6rem; letter-spacing:4px; opacity:0; transition:opacity 1s; font-family:sans-serif;';
         guide.innerText = 'TAP TO CONTINUE';
         this.bootScreen.appendChild(guide);
         setTimeout(() => guide.style.opacity = '0.4', 3000);

@@ -4,13 +4,13 @@
     "id": "tokyo-rediscovery",
     "description": "1923年の建築家・葛城が遺した「水都の設計図」の記憶を辿る",
     "prologue": [
-      "「……誰か、そこにいるのか？」",
-      "「えっ、スマホから声が……？ 誰ですか、あなたは。」",
-      "「私は葛城。1923年、この都市の『未来』を設計しようとした男だ。」",
-      "「葛城……！ 名前だけは聞いたことがあります。震災の猛火の中で、幻の設計図を遺したという建築家……。」",
-      "「いかにも。さあ、私のアーカイブを同期させよう。君の歩みとともに、この街の『真実の輪郭』を復元するんだ。」"
+      "「……そこにいるのは、未来の観測者か？」",
+      "「はい。あなたの遺したアーカイブを辿っています。あなたは……葛城さんですね？」",
+      "「そうだ。1923年、私はこの都市の再生に命を懸けた。震災で失われた夢を、君に託したい。」",
+      "「『水の設計図』……今、私の目の前にある風景に、あなたの記憶が重層的に響いています。」",
+      "「嬉しい回答だ。さあ、スマートフォンを構えて。私と共に、東京の深層へと降りていこう。」"
     ],
-    "prologueImage": "contents/tokyo-rediscovery/assets/prologue_bg.png"
+    "prologueImage": ""
   },
   "theme": {
     "--bg-base": "#f5f0e6",
@@ -27,7 +27,7 @@
       "label": "記録の断片 00",
       "title": "語り部の引き出し",
       "content": [
-        "<div class=\"chat-container\"><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">君が手にしているその端末……それが私の設計図と共鳴している。まずは私の設計思想を理解してほしい。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">設計思想……『東洋のヴェニス』にしようとしていたって話、本当なんですね。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">ああ。大震災で街が焼けた時、私は絶望したが、同時に確信した。都市は石の檻ではない。水が流れ、記憶が重なる生き物なのだ。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">だから、街の随所に未来の私たちが気づくような『楔（くさび）』を遺したと。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">その通り。私の記録は断片化されているが、特定の場所へ赴くことで復元できる。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">まずは、かつて『海』と『陸』の境界であった場所……<strong>『東京駅 八重洲中央口（地上）』</strong>へ向かってくれ。そこが旅の出発点だ。</div></div></div>"
+        "<div class=\"chat-container\"><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">このポータルを通じて、100年前の記憶を同期させる。まずは私が何故、この街に『水の楔』を遺したのかを知ってほしい。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">東洋のヴェニス……。教科書で見た理想的な都市計画ですね。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">震災後の猛火の中で、私は悟ったのだ。都市とは強固な石の防壁ではない。水のように流動し、人々の記憶が堆積する有機体であるべきだとね。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">その設計図が、今の街の地下にまだ生きているんですね。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">いかにも。復元の第一歩として、かつて潮の香りが満ちていた境界……<strong>『東京駅 八重洲中央口』</strong>へ向かってほしい。</div></div></div>"
       ],
       "actionLabel": "手記を開く",
       "nextChapterId": "1",
@@ -46,7 +46,8 @@
       "imageUrl": "contents/tokyo-rediscovery/assets/ship.png",
       "imageCaption": "——葛城の手記に挟まれていた古いスケッチ",
       "content": [
-        "<div class=\"chat-container\"><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">着いたか。ここが八重洲だ。家康の時代、この辺りはすべて豊かな水を湛えた『海』だった。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">信じられない。今は見渡す限りのビル街なのに。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">地名の由来となったヤン・ヨーステン……耶揚子という名をもらったオランダ人も、この海の広さに故郷を重ねたのだろう。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">彼は1600年、リーフデ号という一艘の船でこの国へ流れ着いた。だが、その船には出航当初、別の名が冠されていたのだ。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">別の名……？ 船尾にその人物の像が飾られていたという、あの学者の名ですね。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">いかにも。八重洲通りの記念碑、あるいは地下街にある彼の像を観測してほしい。そこに刻まれた『人文学者の名』こそが、最初の解読鍵だ。</div></div></div>"
+        "<div class=\"chat-container\"><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">八重洲へようこそ。ここはかつて江戸城の外堀が海へと繋がる、もっとも生命力に満ちた水際だった。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">今は高層ビルに囲まれていますが、目を閉じると波音が聞こえてきそうです。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">1600年、この国に流れ着いたヤン・ヨーステンの数奇な運命を思い出すといい。彼が乗ってきた『リーフデ号』だが……。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">出航時の名前が違うんですよね。人文学者の名前を冠していたとか。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">そうだ。船尾に飾られたその人物の像に注目してほしい。そこに、最初の解読鍵が隠されている。</div></div></div>",
+        "<div style=\"margin: 20px -20px; text-align:center;\"><img src=\"artifacts/vintage_dutch_ship_edo_sketch_1776780212937.png\" style=\"width:100%; box-shadow: 0 4px 20px rgba(0,0,0,0.2);\"><p style=\"font-size:0.8rem; color:var(--accent); margin-top:10px;\">葛城がアーカイブに遺した、17thオランダ船の意匠スケッチ</p></div>"
       ],
       "answerKeyword": "エラスムス",
       "successMessage": "……風景の解像度が、少し上がった。",
@@ -70,7 +71,8 @@
       "imageUrl": "contents/tokyo-rediscovery/assets/kirin.png",
       "imageCaption": "——1923年当時のフィルム写真",
       "content": [
-        "<div class=\"chat-container\"><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">日本橋……。お江戸のヘソであり、五街道の起点。ここはまさに都市の心臓だ。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">この橋、何度見ても重厚で美しいですね。麒麟や獅子の像が誇らしげです。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">設計した妻木頼黄は、私の師匠筋にあたる男だ。彼は西洋のバロック様式に日本の伝統を融合させ、とてつもない芸術品を創り上げた。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">欄干の黒ずみを見てごらん。100年前の震災の業火を、この橋は耐え抜いたのだ。都市の不屈の意志がここにある。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">麒麟の像が翼を広げてますね。日本の中心から世界へ羽ばたく象徴……。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">その麒麟が抱えている盾に注目してほしい。そこには、この街の誇りを示す<strong>『三文字の名前』</strong>が刻まれているはずだ。</div></div></div>"
+        "<div class=\"chat-container\"><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">日本橋。ここは五街道の起点であり、都市の心臓部だ。石と青銅が織りなす威厳を見てくれ。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">この麒麟の像、いつ見ても圧倒されます。翼のデザインが本当に繊細ですね。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">設計者の妻木頼黄が込めた『日本の中心から世界へ羽ばたく』という意志。震災を耐え抜いたこの橋は、都市の不屈の象徴なのだ。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">あ、麒麟が抱えている盾……。そこに文字が刻まれていますね。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">それがこの街の誇り高き名前だ。<strong>『三文字の名前』</strong>を正確に観測してほしい。</div></div></div>",
+        "<div style=\"margin: 20px -20px; text-align:center;\"><img src=\"artifacts/nihonbashi_lion_crest_architectural_1776780237140.png\" style=\"width:100%; box-shadow: 0 4px 20px rgba(0,0,0,0.2);\"><p style=\"font-size:0.8rem; color:var(--accent); margin-top:10px;\">妻木頼黄が考案した、獅子と市章の装飾的なディテール</p></div>"
       ],
       "answerKeyword": "東京都",
       "successMessage": "……風景の解像度が、少し上がった。",
@@ -92,7 +94,8 @@
       "title": "人形町、火消しの心意気",
       "monologue": "「えー、人形町。ここはねぇ、情緒が服を着て歩いてるような街でして。昔は吉原遊郭があり、芝居小屋が並び、傀儡師（人形使い）が闊歩してた。葛城の野郎、日記にこう書いてやがる。『ただ立派なビルを作ってもダメだ。そこに住む人の祭りや熱気、そのリズムを街に同期させろ』ってね。からくり櫓が刻んでいるのは時間じゃねぇ。江戸から続く、粋な火消したちの誇りですよ。幕に書かれたその名を、胸に刻んでやっとくれ。」",
       "content": [
-        "<div class=\"chat-container\"><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">人形町。江戸の情緒が服を着て歩いているような街だ。吉原の熱気と芝居小屋の賑わいが、今もこの空気には混ざっている。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">からくり時計の櫓（やぐら）が見えます！ 二つ並んで立っているんですね。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">私は設計図にこう記した。『ただ綺麗なハコを作っても街は死ぬ。住む人の祭りと熱気、そのリズムを同期させろ』と。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">特に、江戸の暮らしを守り続けた男たちの誇りを忘れてはならない。大正の震災時、この街の人々は手を取り合って延焼を防いだのだ。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">あ、このチャットに出ている『職業』の連中のことですね。櫓の幕にもはっきりと名前が……！</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">いかにも。彼らの精神こそが、この街を何度でも蘇らせる。その職業の名を特定できるか。</div></div></div>"
+        "<div class=\"chat-container\"><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">人形町……。ここは江戸の熱気が未だに地面の下で脈動している稀有な場所だ。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">二つのからくり櫓が、街の時間を見守っていますね。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">私は設計図にこう記した。『人の祭りや熱気のリズムがなければ、街はただの抜け殻だ』。特に、火に立ち向かった者たちの誇りを忘れてはならない。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">櫓の幕に書かれた名前……。彼らがこの街の不屈の魂の正体なんですね。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">その通りだ。伝統的な火消しの呼称を特定してほしい。</div></div></div>",
+        "<div style=\"margin: 20px -20px; text-align:center;\"><img src=\"artifacts/edo_hikeshi_matoi_dramatic_1776780264280.png\" style=\"width:100%; box-shadow: 0 4px 20px rgba(0,0,0,0.2);\"><p style=\"font-size:0.8rem; color:var(--accent); margin-top:10px;\">不屈の精神を象徴する、江戸町火消の纒（まとい）のイメージ</p></div>"
       ],
       "answerKeyword": "火消し",
       "successMessage": "……彼らの営みが、微かに聞こえた。",
@@ -117,7 +120,8 @@
       "imageUrl": "contents/tokyo-rediscovery/assets/bridge.png",
       "imageCaption": "——葛城が書き残した『世界一美しい吊り橋』の青写真",
       "content": [
-        "<div class=\"chat-container\"><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">隅田川……。かつて『震災復興の華』と呼ばれた橋が見えてきた。清洲橋だ。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">なんて優美な曲線なんだ……。鉄の橋なのに、どこか柔らかさを感じます。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">私がドイツで見た夢を、ここに具現化したのだよ。当時、世界一美しいと言われたケルン川の吊り橋をモデルにした。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">単に渡るための道具ではない。水辺の景観を祝福し、都市に品格を与えるための祈念碑なのだ、これは。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">『〇〇〇の眺め』として知られるその都市……。葛城さんが東京に重ねた幻の影ですね。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">その通りだ。私の魂を震わせたそのドイツの都市名を、君の観測で確定させてほしい。</div></div></div>"
+        "<div class=\"chat-container\"><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">隅田川。私の理想の結実の一つである清洲橋が見えてきた。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">この曲線……鉄の重厚さと、水の優雅さが完璧に調和しています。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">私がドイツで惚れ込んだ吊り橋の形式……それをこの東京に再現したかった。モデルとなったのは、あの歴史あるドイツの都市だ。</div></div><div class=\"chat-item right\"><div class=\"chat-name\">ハチ</div><div class=\"chat-bubble\">『〇〇〇の眺め』として有名なあの場所……。あなたが東京に重ねた幻ですね。</div></div><div class=\"chat-item left\"><div class=\"chat-name\">葛城</div><div class=\"chat-bubble\">そうだ。その都市の名を観測することで、設計図は完成に近づく。</div></div></div>",
+        "<div style=\"margin: 20px -20px; text-align:center;\"><img src=\"contents/tokyo-rediscovery/assets/bridge.png\" style=\"width:100%; box-shadow: 0 4px 20px rgba(0,0,0,0.2);\"><p style=\"font-size:0.8rem; color:var(--accent); margin-top:10px;\">1928年に完成した、自碇式吊橋の美しいサイドビュー</p></div>"
       ],
       "answerKeyword": "ケルン",
       "successMessage": "……水面が揺れ、道が繋がった。",
