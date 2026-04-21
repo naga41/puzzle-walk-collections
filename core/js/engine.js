@@ -11,8 +11,17 @@ class PuzzleWalkEngine {
 
     async init() {
         const urlParams = new URLSearchParams(window.location.search);
-        const contentId = urlParams.get('content') || 'tokyo-rediscovery'; 
-        this.isDemoMode = urlParams.get('demo') === 'true';
+        
+        // URLが勝手にエンコード（%3D等）されてしまった時のための安全策
+        const rawSearch = decodeURIComponent(window.location.search);
+        
+        let contentId = urlParams.get('content');
+        if (!contentId && rawSearch.includes('content=tokyo-rediscovery')) {
+             contentId = 'tokyo-rediscovery';
+        }
+        contentId = contentId || 'tokyo-rediscovery'; 
+        
+        this.isDemoMode = urlParams.get('demo') === 'true' || rawSearch.includes('demo=true');
 
         try {
             const response = await fetch(`contents/${contentId}/scenario.json`);
